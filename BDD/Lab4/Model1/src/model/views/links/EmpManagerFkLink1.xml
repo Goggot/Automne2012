@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpManagerFkLink1"
+  Version="11.1.2.60.81">
+  <ViewLinkDefEnd
+    Name="EmployeesViewLecture"
+    Cardinality="1"
+    Source="true"
+    Owner="model.views.EmployeesViewLecture">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EmployeesViewLecture"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.EmployeesViewLecture.EmployeeId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="ManagerIdEmployeesViewLecture"
+    Cardinality="-1"
+    Owner="model.views.EmployeesViewLecture">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ManagerIdEmployeesViewLecture"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.EmployeesViewLecture.ManagerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

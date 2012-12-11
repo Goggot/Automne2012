@@ -1,0 +1,681 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">044edcb2-ea7b-45c0-9d48-1b32059ee6f8</identifier>
+  </ID>
+  <name>EMP</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b4912fbd-7bcd-4607-9956-6ca051026885</identifier>
+      </ID>
+      <name>EMPNO</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f4efee59-f9b2-4eb6-b25c-80b0049662a9</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">4</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>EMPNO</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>EMPNO</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">aad5d8c0-dbbc-45ad-b3fb-466d95bf0050</identifier>
+      </ID>
+      <name>ENAME</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2b3edba6-38b9-4aa3-b72a-6217686906cb</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>ENAME</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ENAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">d95a3367-ca80-4c49-9eaa-142be1f18d42</identifier>
+      </ID>
+      <name>JOB</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">b88c0577-f514-4c5f-a52e-7bd3d796aab7</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">9</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>JOB</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>JOB</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">79c5f8e0-b65e-45df-8908-52573553f5ad</identifier>
+      </ID>
+      <name>MGR</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">83b1f16a-2d46-4930-88e2-f33ff7dc07bb</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">4</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>MGR</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MGR</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">ecb91602-1c0d-4b70-93b6-3e3f891a786a</identifier>
+      </ID>
+      <name>HIREDATE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">71fb6122-7971-4c10-a51b-acc63eb209ea</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DATE</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>HIREDATE</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>HIREDATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5e618133-1eb6-4e14-a1ca-d3177629b0ce</identifier>
+      </ID>
+      <name>SAL</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">d4703b2c-ac88-4191-ad8d-90a9297f2232</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">7</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">2</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>SAL</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SAL</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6b9ad1f7-4220-4513-8aba-28d7cbe835a2</identifier>
+      </ID>
+      <name>COMM</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">8a4ecd3b-5eb8-43b8-b310-cacaec4fc01b</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">7</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">2</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>COMM</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>COMM</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">4475008e-3752-49ec-8c1f-3e994cc2f10f</identifier>
+      </ID>
+      <name>DEPTNO</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e296c6f5-9a5b-4430-a2fb-819fbbf097fe</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">2</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>DEPTNO</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>EMP</name>
+                  <identifier class="java.math.BigDecimal">329783</identifier>
+                  <schemaName>H12PALANER</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>DEPTNO</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">85ca8f98-4e2c-4b83-9eb1-a6a0d26e89e6</identifier>
+      </ID>
+      <name>SYS_C00257700</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>MGR</name>
+          <identifier class="java.lang.String">79c5f8e0-b65e-45df-8908-52573553f5ad</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>EMP</name>
+            <identifier class="java.lang.String">044edcb2-ea7b-45c0-9d48-1b32059ee6f8</identifier>
+            <schemaName>H12PALANER</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>H12PALANER</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SYS_C00257700</name>
+            <childObjectNames>
+              <childObjectName>MGR</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SYS_C00257699</name>
+        <identifier class="java.lang.String">23e2c277-89cb-406b-9ce5-ccb98e22ff64</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>EMP</name>
+          <identifier class="java.lang.String">044edcb2-ea7b-45c0-9d48-1b32059ee6f8</identifier>
+          <schemaName>H12PALANER</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>H12PALANER</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">67907a2b-79af-4cbd-a545-205422e0e0d5</identifier>
+      </ID>
+      <name>SYS_C00257701</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>DEPTNO</name>
+          <identifier class="java.lang.String">4475008e-3752-49ec-8c1f-3e994cc2f10f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>EMP</name>
+            <identifier class="java.lang.String">044edcb2-ea7b-45c0-9d48-1b32059ee6f8</identifier>
+            <schemaName>H12PALANER</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>H12PALANER</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SYS_C00257701</name>
+            <childObjectNames>
+              <childObjectName>DEPTNO</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SYS_C00257697</name>
+        <identifier class="java.lang.String">7d1d1cff-1bdd-49f7-bb11-17a48c7cfc58</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>DEPT</name>
+          <identifier class="java.lang.String">94f35e6a-3e2a-4094-a7e2-847c49d9a53c</identifier>
+          <schemaName>H12PALANER</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>H12PALANER</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">23e2c277-89cb-406b-9ce5-ccb98e22ff64</identifier>
+      </ID>
+      <name>SYS_C00257699</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>EMPNO</name>
+          <identifier class="java.lang.String">b4912fbd-7bcd-4607-9956-6ca051026885</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>EMP</name>
+            <identifier class="java.lang.String">044edcb2-ea7b-45c0-9d48-1b32059ee6f8</identifier>
+            <schemaName>H12PALANER</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>H12PALANER</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.ReferenceID">
+        <name>SYS_C00257699</name>
+        <identifier class="java.math.BigDecimal">329784</identifier>
+        <schemaName>H12PALANER</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SYS_C00257699</name>
+            <childObjectNames>
+              <childObjectName>EMPNO</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>EMP</name>
+              <identifier class="java.math.BigDecimal">329783</identifier>
+              <schemaName>H12PALANER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">cegep</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>EMP</name>
+        <identifier class="java.math.BigDecimal">329783</identifier>
+        <schemaName>H12PALANER</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">3dc0ccb1-72b2-440e-b7b3-6517d18c1cb9</identifier>
+        </ID>
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>2147483645</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>1048576</nextExtent>
+        <percentFree>10</percentFree>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>EMP</name>
+                <identifier class="java.math.BigDecimal">329783</identifier>
+                <schemaName>H12PALANER</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>OracleStorageProperties</type>
+            </value>
+          </entry>
+        </properties>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>H12</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>H12PALANER</name>
+  </schema>
+</table>

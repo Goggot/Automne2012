@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.2.60.81"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DeptView1"
+    ViewObjectName="model.views.DeptView"/>
+  <ViewUsage
+    Name="EmpView1"
+    ViewObjectName="model.views.EmpView"/>
+  <ViewUsage
+    Name="DeptViewLecture1"
+    ViewObjectName="model.views.DeptViewLecture"/>
+  <ViewUsage
+    Name="EmpView2"
+    ViewObjectName="model.views.EmpView"/>
+  <ViewUsage
+    Name="EmpView3"
+    ViewObjectName="model.views.EmpView"/>
+  <ViewLinkUsage
+    Name="SysC00257700Link1"
+    ViewLinkObjectName="model.views.links.SysC00257700Link"
+    SrcViewUsageName="model.moduleApplication.AppModule.EmpView1"
+    DstViewUsageName="model.moduleApplication.AppModule.EmpView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SysC00257701Link1"
+    ViewLinkObjectName="model.views.links.SysC00257701Link"
+    SrcViewUsageName="model.moduleApplication.AppModule.DeptView1"
+    DstViewUsageName="model.moduleApplication.AppModule.EmpView3"
+    Reversed="false"/>
+</AppModule>
