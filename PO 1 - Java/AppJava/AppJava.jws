@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <value n="appTemplateId" v="javaAppTemplate"/>
+   <hash n="component-versions">
+      <value n="oracle.adf.share.dt.migration.jps.JaznCredStoreMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.adfdtinternal.model.ide.security.extension.AdfSecurityMigrator" v="11.1.1.1.0.13"/>
+      <value n="oracle.ide.model.Project" v="11.1.1.1.0;11.1.2.0.0"/>
+      <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.appresources.ApplicationSrcDirMigrator" v="11.1.2.0.0"/>
+      <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.deploy.base.MarMigratorHelper" v="11.1.1.1.0"/>
+      <value n="oracle.mds.internal.dt.ide.migrator.MDSConfigMigratorHelper" v="11.1.1.0.5313"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationLevelMavenPOMContentSet"/>
+   </list>
+   <list n="listOfChildren">
+      <hash><url n="URL" path="Annexe6/Annexe6.jpr"/></hash>
+      <hash><url n="URL" path="Erwan_Palanque_Zomba/Examen2.jpr"/></hash>
+      <hash><url n="URL" path="Erwan Palanque/Examen3.jpr"/></hash>
+      <hash><url n="URL" path="Examen/Examen.jpr"/></hash>
+      <hash><url n="URL" path="ExamenFinal/ExamenFinal.jpr"/></hash>
+      <hash><url n="URL" path="exerciceVecteur/exerciceVecteur.jpr"/></hash>
+      <hash><url n="URL" path="LocationFilm/LocationFilm.jpr"/></hash>
+      <hash><url n="URL" path="prisme/prisme.jpr"/></hash>
+      <hash><url n="URL" path="Projet0/Projet0.jpr"/></hash>
+      <hash><url n="URL" path="ProjetMaison/ProjetMaison.jpr"/></hash>
+      <hash><url n="URL" path="projetPiles/ProjetPiles.jpr"/></hash>
+      <hash><url n="URL" path="ProjetString/ProjetString.jpr"/></hash>
+      <hash><url n="URL" path="ProjetSyntheseVersionEtudiant/ProjetSynthese.jpr"/></hash>
+      <hash><url n="URL" path="ProjetVecteursChanson/ProjetVecteursChanson.jpr"/></hash>
+      <hash><url n="URL" path="testJOptionPane/testJOptionPane.jpr"/></hash>
+      <hash><url n="URL" path="TP1/TP1.jpr"/></hash>
+      <hash><url n="URL" path="TP2/ProjetTP2.jpr"/></hash>
+   </list>
+</jws:workspace>

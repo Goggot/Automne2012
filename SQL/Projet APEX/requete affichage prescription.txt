@@ -1,0 +1,3 @@
+SELECT p.no, c.prenom, c.nom, p.date, m.nom, p.quantite, p.nbrenou, p.nodoc, 
+FROM rx_prescription p, rx_client c, rx_medicament m
+WHERE p.nocli = c.no AND p.nomedi = m.no;

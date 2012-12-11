@@ -1,0 +1,34 @@
+		Cas d'usage
+
+La grille s'affiche :
+	1- Le joueur choisit avec la souris l'endroit où poser son X
+	2- L'ordinateur vérifie si la partie est finie
+		a- Si une diagonal est complete, la partie est finie, attendre que le joueur quitte
+		b- sinon, la partie continue
+	3- L'ordinateur place un cercle sur une case vide au hazard
+	4- Vérification de fin de partie
+		a- Si la partie est finie, attendre que le joueur quitte
+		b- sinon, on continu la partie, on relance la boucle
+
+
+
+		Scénarii d'utilisation
+
+-Le joueur clique sur la case de son choix
+	--L'ordinateur vérifie dans le tableau Grille si la place est libre
+		---Si la place est libre, l'ordinateur assigne (X/O) dans le tableau
+			----Affichage du signe à l'ecran
+			----Vérification de l'alignement de la case modifier
+				-----Si 3 du même signe à la suite, la partie est finie, afficher le gagnant (dernier signe rentrer)
+				-----Sinon, la partie continue
+				
+		---Sinon, rien ne s'affiche, rien de change; attendre que le joueur face un choix correct
+	
+- L'ordinateur choisi une place au hazard dans la grille
+	--Si la place est libre, l'ordinateur assigne (X/O) dans le tableau
+		---Affichage du signe à l'écran
+		---Vérification de l'alignement de la case modifier
+			----Si 3 du même signe à la suite, la partie est finie, afficher le gagnant 
+			----Sinon, la partie continue
+			
+	--Sinon, l'ordinateur cherche en boucle jusqu'à trouver une place libre

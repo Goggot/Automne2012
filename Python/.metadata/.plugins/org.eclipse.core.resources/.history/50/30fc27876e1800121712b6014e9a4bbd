@@ -1,0 +1,4 @@
+class Ecrivain():
+
+if __name__ == '__main__':
+    obj=Ecrivain()

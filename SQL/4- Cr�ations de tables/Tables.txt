@@ -1,0 +1,27 @@
+CREATE TABLE enseignant (
+  id              NUMBER(7),
+  id_departement  NUMBER(2) NOT NULL,
+  nom             VARCHAR2(50) NOT NULL,
+  mail            VARCHAR2(50) NOT NULL,
+  poste           NUMBER(2) NOT NULL,
+  date_embauche   DATE NOT NULL,
+  image           VARCHAR2(50),
+  description     VARCHAR2(500),
+  
+  CONSTRAINT pk_enseignant PRIMARY KEY(id),
+  CONSTRAINT ck_enseignant_poste CHECK (poste BETWEEN 7000 AND 7999),
+  CONSTRAINT uk_enseignant_mail UNIQUE (mail),
+  CONSTRAINT fk_enseignant_dept_id FOREIGN KEY (id_departement) REFERENCES departement(id) ON DELETE CASCADE
+);
+
+ALTER TABLE enseignant ADD nas VARCHAR2(9);
+
+ALTER TABLE enseignant MODIFY nas CHAR(9) NOT NULL;
+
+ALTER TABLE enseignant ADD CONSTRAINT uk_enseignant_nas UNIQUE(nas);  
+
+ALTER TABLE enseignant DROP CONSTRAINT uk_enseignant_nas;
+
+ALTER TABLE enseignant ADD CONSTRAINT uk_enseignant_nom_pre UNIQUE(nom, prenom);
+CREATE INDEX idx_enseignant_nom ON enseignant(nom, prenom);
+

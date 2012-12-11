@@ -1,0 +1,88 @@
+
+				Communication
+			      Dévelopement agile
+			    La Méthode À Jean-Marc
+			    
+Le Principe : passer de l'informel (language parlé) au formel (programmation)
+
+0 - Mandat --> Monde ordinaire qui ont besoin de faire traiter automatiquement leurs infos
+1 - Comprendre le mandat --> dictionnaire des noms, des verbes et des adjectifs
+
+	Exemple :
+		   "Envoyer compte au client par courriel"
+		---> Obtenir et Gèrer les adresses emails <---
+
+		Noms		Verbes		Adjectifs
+	----------------------------------------------------------->>>	    
+	       compte		envoyer
+	       client
+	       couriel	
+	       
+	     		 CONSERVER UN HISTORIQUE
+	     		 
+2 - Cas d'usage (job encapsulé)
+3 - Maquettes visuelle
+
+			Scénarii d'utilisation 
+			(interactions seulement)
+			
+-Login : demande de login --> interface --> indiquer ID et passwd --> choix d'annuler ou d'accepter
+		--> Si accepter --> fonction de vérification --> rentrer si infos corrects
+	
+Choix à faire : profondeur du scénario --> étape nécessaire, mais doit être fait rapidement, 
+						sinon elle peut détruire le projet
+
+YAGNI : You Ant Gonna Need It
+KIS : Keep It Simple
+
+			CRC
+
+	Classe
+	---------------------------------
+	|GestionnaireBD	 |AfficherForm	|
+	|________________|     ---	|Collaboration
+	|		 |     etc...	|
+	|________________|______________|
+	Responsabilité
+
+Les propriétaires d'une classe ne font pas nécessairement toujours le boulot de la classe.
+
+Time Boxing : répartir les tâches sur le temps en fonction de leur difficultés (voir feuille).
+
+MVC : Modele View Controler (voir feuille).
+
+## B = A[:] --> donne une COPIE de la liste A appeller B, et non juste un pointeur B vers elle 
+## A[:-1] --> dit d'aller a la valeur avant celle choisi
+
+
+
+Boucle evenementiel
+
+Tkinter --> TK-interface
+
+from tkinter import *
+	--> permet d'utiliser ensuite par exemple Button() à la place de tkinter.Button()
+	
+1 - initialise une boucle evenementiel (au debut)
+2 - affiche une fenetre (fin)
+
+racine = tk()
+tk.root
+
+Controleur()
+	init
+	mod=modele
+	
+	self.vue.root.mainloop()	// Fin du traitement par l'ordinateur, laisse les commandes 							à la personne
+
+interpreteur Widget (UN SEUL À LA FOIS):
+	1- pack(...option...)
+	2- grid(Column=0,row=0)
+	
+Planifier l'implentation :
+	- Ordonner 
+
+
+
+
+

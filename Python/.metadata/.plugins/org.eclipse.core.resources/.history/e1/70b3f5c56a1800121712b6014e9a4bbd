@@ -1,0 +1,18 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():
+    if __name__ == '__main__': # Ctrl+Space pour menu interactif de complétion
+        print("test")
+        
+class toto():
+    def __init__(self):
+
+t=toto()
+
+print(t)
+
+    

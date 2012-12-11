@@ -1,0 +1,18 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():                   # On appel une classe avec une MAJUSCULE
+    if __name__ == '__main__':  # Ctrl+Space pour menu interactif de completion
+        print("Pouet")                               # avec MAIN dans ce cas-ci
+        
+class Toto():
+    def __init__(self,argnom,argprenom):   # self = attribut de POINTEUR, doit être spécifiquement 
+        self.nom=argnom          # mentionné dans chaque nouvelle méthode pour utiliser 
+        self.prenom=argprenom
+
+t1=Toto("joe")
+t2=Toto("bill")
+print(t1.nom, t2.nom)

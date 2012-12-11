@@ -1,0 +1,9 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():
+    if __name__ == '__main__':
+    

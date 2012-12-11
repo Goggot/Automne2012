@@ -1,0 +1,6 @@
+DecimalFormat modele = new DecimalFormat("0.00$");
+double nb = 42.7501;
+System.out.println(modele.format(nb));
+		// Imprime "42.75$"
+champReponse.settext(modele.format(nb));
+		// Retourne une string à partir du nombre, arrondie.

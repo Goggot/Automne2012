@@ -1,0 +1,7 @@
+Notes python
+
+Button(self.root, text="Cliquez-moi", command=self.faitQuelqueChose)
+self.canevas=Canvas(self.root)
+self.canevas.bind("<Button-1>", self.trouveClique)
+def trouveClique(self, evt):
+	self.x=evt.x

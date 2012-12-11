@@ -1,0 +1,28 @@
+class Ecrivain():
+    def __init__(self, fichier="fichiertest.txt"):
+            self.fichier=fichier
+            
+    def ecristotal(self,montexte):
+        f=open(self.fichier,"w")    #"w" est une option : write
+        f.write(montexte)
+        f.close()
+        return "Ecriture reussie"
+        
+    def ajoute(self,montexte): 
+        f=open(self.fichier,"a")        # "a" est une option : append
+        f.write(montexte)
+        f.close()
+        return "Ajout reussi"
+    
+    def lis(self,fichier=""):
+        if fichier:
+            self.fichier=fichier
+        f=open(self.fichier,"r")        # "r" est une option : read
+        montexte=f.read()
+        f.close()
+        return montexte
+        
+                  
+if __name__ == '__main__':
+    obj=Ecrivain()
+    print(obj.ajoute("exemple"))

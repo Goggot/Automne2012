@@ -1,0 +1,8 @@
+class Ecrivain():
+    def __init__(self, fichier="fichiertest.txt"):
+            self.fichier=fichier
+    def ecris(self,montexte):
+            
+            
+if __name__ == '__main__':
+    obj=Ecrivain()

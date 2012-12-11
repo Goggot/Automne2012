@@ -1,0 +1,51 @@
+Notes java 2
+
+Arraylist vs Vector
+
+Différences :
+	1- Capacité
+		-Vector : 	
+				--capacité initial
+				--gérer le processus d'augmentation de la capacité
+				--accès à la capacité
+		
+		-Arraylist :
+				--capacité existe mais impossible d'accéder à une méthode de gestion de capacité
+	
+	2- Un Vector est synchronisé, et non une Arraylist
+	
+Les itérateurs 
+	- Permet de parcourir les différents éléments d'un vecteur, d'une arraylist, d'un stack, etc.
+	
+Ex:
+	main {
+		Arraylist <String> salutations = new Arraylist <String> ();
+		salutations.add("Bonjour");
+		salutations.add("Salut");
+		salutations.add("Good morning");
+		etc.
+		
+		Iterator <String> i = salutations.iterator();	// Doit mettre en oeuvre Iterable
+		
+		while (i.hasNext()){
+			System.out.println(i.next());
+			i.remove();
+		}
+	}
+		
+	// boucle FOR améliorée
+		for(String uneSalutation : salutations)
+			System.out.println(uneSalutation);
+
+			
+Fonctionne ou pas ? : 
+
+	1 - Arraylist <char> liste = new Arraylist <char>();
+			// char n'est pas un objet, on utilise Character
+			
+	2 - list.add('a');
+			// fonctionne, transformé automatiquement en : new Character('a')
+	
+	3 - System.out.println(new Integer(10) + new Integer(5));
+			// fonctionne, retourne 15
+

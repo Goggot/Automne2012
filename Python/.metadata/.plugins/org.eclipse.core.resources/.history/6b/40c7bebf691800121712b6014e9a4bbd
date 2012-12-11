@@ -1,0 +1,7 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():

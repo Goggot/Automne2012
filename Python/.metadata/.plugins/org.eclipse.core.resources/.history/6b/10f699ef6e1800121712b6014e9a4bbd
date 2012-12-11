@@ -1,0 +1,9 @@
+class Ecrivain():
+    def __init__(self, fichier="fichiertest.txt"):
+            self.fichier=fichier
+            
+    def ecristotal(self,montexte):
+            f=open(self.fichier,"w")
+            
+if __name__ == '__main__':
+    obj=Ecrivain()

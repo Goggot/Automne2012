@@ -1,0 +1,6 @@
+JOptionPane
+	- Pour créer des boites de dialogues (standard)
+	- si vous désirez pleine libberté --> JDialog
+	- la plupart des methodes JOptionPane sont créer de manières statiques
+	
+	

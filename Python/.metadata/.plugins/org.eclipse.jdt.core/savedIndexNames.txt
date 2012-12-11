@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/home/pouet/Documents/Prog/Python/.metadata/.plugins/org.eclipse.jdt.core

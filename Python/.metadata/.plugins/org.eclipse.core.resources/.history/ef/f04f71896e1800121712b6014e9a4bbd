@@ -1,0 +1,6 @@
+class Ecrivain():
+    def __init__(self):
+        
+
+if __name__ == '__main__':
+    obj=Ecrivain()

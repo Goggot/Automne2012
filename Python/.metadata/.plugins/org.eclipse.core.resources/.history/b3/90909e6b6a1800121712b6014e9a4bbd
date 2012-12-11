@@ -1,0 +1,14 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():
+    if __name__ == '__main__': # Ctrl+Space pour menu interactif, puis MAIN dans cette situation
+        print("test")
+        
+class toto():
+    pass
+
+    

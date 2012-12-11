@@ -1,0 +1,14 @@
+package LocationFilm;
+
+public class TestConstructeur
+{
+  public static void main(String[] args)
+  {
+    LocationFilm primeur = new LocationFilm("Léon");
+    LocationFilm regulier = new LocationFilm(3, "Terminator");
+    LocationFilm special = new LocationFilm(4.74, 4, "The Walking Dead");
+    LocationFilm film1234 = new LocationFilm("James Bond");
+    primeur.setPrix(7);
+    System.out.print(primeur.getPrix());
+  }
+}

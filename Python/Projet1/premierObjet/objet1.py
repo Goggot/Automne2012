@@ -1,0 +1,24 @@
+#commentaire 1
+
+"""ceci 
+est un commentaire 
+multiligne"""
+
+class Tata():                   # On appel une classe avec une MAJUSCULE
+    if __name__ == '__main__':  # Ctrl+Space pour menu interactif de completion
+        print("Pouet")                               # avec MAIN dans ce cas-ci
+        
+class Toto():
+    def __init__(self, argnom, argprenom="joe"): # self = attribut de POINTEUR, doit etre  
+        self.nom=argnom                         # specifiquement mentionne dans chaque
+        self.prenom=argprenom                   # nouvelle methode si on veut une "variable globale"
+    def combiendelettres(self):
+        nn = len(self.nom)      # len = length
+        np = len(self.prenom)
+        x = nn+np
+        return x   
+
+t1=Toto("joe")
+t2=Toto("bill","jack")
+print(t1.nom, t2.nom);
+print(t1.combiendelettres(),t2.combiendelettres());
