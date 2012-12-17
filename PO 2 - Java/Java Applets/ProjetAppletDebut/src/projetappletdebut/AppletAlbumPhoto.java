@@ -37,7 +37,6 @@ public class AppletAlbumPhoto extends JApplet
     surface.setLocation(20,20);     // Emplacement de la surface
     this.getContentPane().add(surface);
     
-    
     try
     {
       jbInit();
@@ -52,6 +51,7 @@ public class AppletAlbumPhoto extends JApplet
   public void mouseClicked(MouseEvent e)
   {
     if (e.getX() > 400 && e.getX() < 450)
+            // get par rapport à l'applet, pas à la surface
     {
       if (e.getY() > 100 && e.getY() < 300)
       {
@@ -63,6 +63,7 @@ public class AppletAlbumPhoto extends JApplet
         
       }
       else if (e.getY() > 350 && e.getY() < 550)
+            // get par rapport à l'applet, pas à la surface
       {        
         if (boucle == 3)
           boucle = 0;

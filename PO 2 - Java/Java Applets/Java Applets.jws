@@ -22,6 +22,7 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="Client/Client.jpr"/></hash>
+      <hash><url n="URL" path="FeuSignalisation/FeuSignalisation.jpr"/></hash>
       <hash><url n="URL" path="ProjetAppletDebut/ProjetAppletDebut.jpr"/></hash>
    </list>
 </jws:workspace>
