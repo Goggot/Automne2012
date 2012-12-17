@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VHotelView"
+  Version="11.1.2.60.81"
+  SelectList="VHotel.HOTNO, 
+       VHotel.HOTNOM, 
+       VHotel.HOTCOTE, 
+       VHotel.HOTPISCINE, 
+       VHotel.HOTNBCHAMBRETOT"
+  FromList="H12PALANER.V_HOTEL VHotel"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="VHotel"
+    Entity="model.entities.VHotel"/>
+  <ViewAttribute
+    Name="Hotno"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Hotno"
+    EntityUsage="VHotel"
+    AliasName="HOTNO"/>
+  <ViewAttribute
+    Name="Hotnom"
+    PrecisionRule="true"
+    EntityAttrName="Hotnom"
+    EntityUsage="VHotel"
+    AliasName="HOTNOM"/>
+  <ViewAttribute
+    Name="Hotcote"
+    PrecisionRule="true"
+    EntityAttrName="Hotcote"
+    EntityUsage="VHotel"
+    AliasName="HOTCOTE"/>
+  <ViewAttribute
+    Name="Hotpiscine"
+    PrecisionRule="true"
+    EntityAttrName="Hotpiscine"
+    EntityUsage="VHotel"
+    AliasName="HOTPISCINE"/>
+  <ViewAttribute
+    Name="Hotnbchambretot"
+    PrecisionRule="true"
+    EntityAttrName="Hotnbchambretot"
+    EntityUsage="VHotel"
+    AliasName="HOTNBCHAMBRETOT"/>
+  <ViewLinkAccessor
+    Name="VVoyageView"
+    ViewLink="model.view.link.VHotelHotnoFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

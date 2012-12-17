@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EEtudiant"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="E_ETUDIANT"
+  AliasName="EEtudiant"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Etumatricule"
+    IsNotNull="true"
+    Precision="8"
+    ColumnName="ETUMATRICULE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_ETUDIANT"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Etunom"
+    Precision="30"
+    ColumnName="ETUNOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_ETUDIANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Etudate"
+    ColumnName="ETUDATE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="E_ETUDIANT"/>
+  <Attribute
+    Name="Etuadr"
+    Precision="40"
+    ColumnName="ETUADR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_ETUDIANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Etutel"
+    Precision="10"
+    ColumnName="ETUTEL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_ETUDIANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Progno"
+    Precision="6"
+    ColumnName="PROGNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_ETUDIANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="ECourssuivi"
+    Association="model.entities.assoc.CourssuiviEtumatriculeAssoc"
+    AssociationEnd="model.entities.assoc.CourssuiviEtumatriculeAssoc.ECourssuivi"
+    AssociationOtherEnd="model.entities.assoc.CourssuiviEtumatriculeAssoc.EEtudiant"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EProgramme"
+    Association="model.entities.assoc.PrognoetuproAssoc"
+    AssociationEnd="model.entities.assoc.PrognoetuproAssoc.EProgramme"
+    AssociationOtherEnd="model.entities.assoc.PrognoetuproAssoc.EEtudiant"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="EntityObject1etumatriculeCh">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ENTITY_OBJECT1ETUMATRICULE_CH"/>
+      <Attr Name="_checkCondition" Value="ETUMATRICULE IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="EtudiantPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ETUDIANT_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.EEtudiant.Etumatricule"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Prognoetupro">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PROGNO"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PROGNOETUPRO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.EEtudiant.Progno"/>
+    </AttrArray>
+  </Key>
+</Entity>

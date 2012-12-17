@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Enseignant"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="ENSEIGNANT"
+  AliasName="Enseignant"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    Precision="7"
+    Scale="0"
+    ColumnName="ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ENSEIGNANT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="IdDepartement"
+    IsNotNull="true"
+    Precision="2"
+    Scale="0"
+    ColumnName="ID_DEPARTEMENT"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ENSEIGNANT"/>
+  <Attribute
+    Name="Nom"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="NOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ENSEIGNANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Mail"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="MAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ENSEIGNANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Poste"
+    IsNotNull="true"
+    Precision="2"
+    Scale="0"
+    ColumnName="POSTE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="ENSEIGNANT"/>
+  <Attribute
+    Name="DateEmbauche"
+    IsNotNull="true"
+    ColumnName="DATE_EMBAUCHE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="ENSEIGNANT"/>
+  <Attribute
+    Name="Image"
+    Precision="50"
+    ColumnName="IMAGE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ENSEIGNANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="500"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ENSEIGNANT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="CkEnseignantPoste">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CK_ENSEIGNANT_POSTE"/>
+      <Attr Name="_checkCondition" Value="POSTE BETWEEN 7000 AND 7999"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="PkEnseignant"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_ENSEIGNANT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.Enseignant.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UkEnseignantMail">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="UK_ENSEIGNANT_MAIL"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.Enseignant.Mail"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkEnseignantDeptId">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_DEPT"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_ENSEIGNANT_DEPT_ID"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.Enseignant.IdDepartement"/>
+    </AttrArray>
+  </Key>
+</Entity>

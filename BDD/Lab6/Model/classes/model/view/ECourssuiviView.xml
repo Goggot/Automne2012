@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ECourssuiviView"
+  Version="11.1.2.60.81"
+  SelectList="ECourssuivi.ETUMATRICULE, 
+       ECourssuivi.COURSNO, 
+       ECourssuivi.CSUIVISESSION, 
+       ECourssuivi.CSUIVINOTE, 
+       ECourssuivi.COURSSUIVINO"
+  FromList="E_COURSSUIVI ECourssuivi"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="ECourssuivi"
+    Entity="model.entities.ECourssuivi"/>
+  <ViewAttribute
+    Name="Etumatricule"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Etumatricule"
+    EntityUsage="ECourssuivi"
+    AliasName="ETUMATRICULE"/>
+  <ViewAttribute
+    Name="Coursno"
+    PrecisionRule="true"
+    EntityAttrName="Coursno"
+    EntityUsage="ECourssuivi"
+    AliasName="COURSNO"/>
+  <ViewAttribute
+    Name="Csuivisession"
+    PrecisionRule="true"
+    EntityAttrName="Csuivisession"
+    EntityUsage="ECourssuivi"
+    AliasName="CSUIVISESSION"/>
+  <ViewAttribute
+    Name="Csuivinote"
+    PrecisionRule="true"
+    EntityAttrName="Csuivinote"
+    EntityUsage="ECourssuivi"
+    AliasName="CSUIVINOTE"/>
+  <ViewAttribute
+    Name="Courssuivino"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Courssuivino"
+    EntityUsage="ECourssuivi"
+    AliasName="COURSSUIVINO"/>
+</ViewObject>

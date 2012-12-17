@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EEtudiantView"
+  Version="11.1.2.60.81"
+  SelectList="EEtudiant.ETUMATRICULE, 
+       EEtudiant.ETUNOM, 
+       EEtudiant.ETUDATE, 
+       EEtudiant.ETUADR, 
+       EEtudiant.ETUTEL, 
+       EEtudiant.PROGNO"
+  FromList="E_ETUDIANT EEtudiant"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="EEtudiant"
+    Entity="model.entities.EEtudiant"/>
+  <ViewAttribute
+    Name="Etumatricule"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Etumatricule"
+    EntityUsage="EEtudiant"
+    AliasName="ETUMATRICULE"/>
+  <ViewAttribute
+    Name="Etunom"
+    PrecisionRule="true"
+    EntityAttrName="Etunom"
+    EntityUsage="EEtudiant"
+    AliasName="ETUNOM"/>
+  <ViewAttribute
+    Name="Etudate"
+    PrecisionRule="true"
+    EntityAttrName="Etudate"
+    EntityUsage="EEtudiant"
+    AliasName="ETUDATE"/>
+  <ViewAttribute
+    Name="Etuadr"
+    PrecisionRule="true"
+    EntityAttrName="Etuadr"
+    EntityUsage="EEtudiant"
+    AliasName="ETUADR"/>
+  <ViewAttribute
+    Name="Etutel"
+    PrecisionRule="true"
+    EntityAttrName="Etutel"
+    EntityUsage="EEtudiant"
+    AliasName="ETUTEL"/>
+  <ViewAttribute
+    Name="Progno"
+    PrecisionRule="true"
+    EntityAttrName="Progno"
+    EntityUsage="EEtudiant"
+    AliasName="PROGNO"/>
+  <ViewLinkAccessor
+    Name="ECourssuiviView"
+    ViewLink="model.view.links.CourssuiviEtumatriculeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EProgrammeView"
+    ViewLink="model.view.links.EtudiantProgrammeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

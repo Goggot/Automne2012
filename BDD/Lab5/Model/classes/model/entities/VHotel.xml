@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VHotel"
+  Version="11.1.2.60.81"
+  DBObjectType="TABLE"
+  DBObjectName="H12PALANER.V_HOTEL"
+  AliasName="VHotel"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Hotno"
+    IsNotNull="true"
+    Precision="5"
+    Scale="0"
+    ColumnName="HOTNO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="H12PALANER.V_HOTEL"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Hotnom"
+    Precision="25"
+    ColumnName="HOTNOM"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="H12PALANER.V_HOTEL"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Hotcote"
+    Precision="1"
+    Scale="0"
+    ColumnName="HOTCOTE"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="H12PALANER.V_HOTEL"/>
+  <Attribute
+    Name="Hotpiscine"
+    Precision="1"
+    ColumnName="HOTPISCINE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="H12PALANER.V_HOTEL"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Hotnbchambretot"
+    Precision="3"
+    Scale="0"
+    ColumnName="HOTNBCHAMBRETOT"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="H12PALANER.V_HOTEL"/>
+  <AccessorAttribute
+    Name="VVoyage"
+    Association="model.entities.assoc.VHotelHotnoFkAssoc"
+    AssociationEnd="model.entities.assoc.VHotelHotnoFkAssoc.VVoyage"
+    AssociationOtherEnd="model.entities.assoc.VHotelHotnoFkAssoc.VHotel"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="VHotelHotnoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="V_HOTEL_HOTNO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.VHotel.Hotno"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VClient"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="V_CLIENT"
+  AliasName="VClient"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  RowClass="model.entities.VClientImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="Clino"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="CLINO"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="V_CLIENT"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Cliprenom"
+    Precision="20"
+    ColumnName="CLIPRENOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_CLIENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Clinom"
+    Precision="15"
+    ColumnName="CLINOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_CLIENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Clirue"
+    Precision="30"
+    ColumnName="CLIRUE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_CLIENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Cliville"
+    Precision="12"
+    ColumnName="CLIVILLE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="V_CLIENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="12"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Clitelephone"
+    Precision="8"
+    ColumnName="CLITELEPHONE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="V_CLIENT"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="VContrat"
+    Association="model.entities.assoc.VClientClinoFkAssoc"
+    AssociationEnd="model.entities.assoc.VClientClinoFkAssoc.VContrat"
+    AssociationOtherEnd="model.entities.assoc.VClientClinoFkAssoc.VClient"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="VClientClinoPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="V_CLIENT_CLINO_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.VClient.Clino"/>
+    </AttrArray>
+  </Key>
+</Entity>

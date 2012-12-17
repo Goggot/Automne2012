@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.2.60.81"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="VClientView1"
+    ViewObjectName="model.view.VClientView"/>
+  <ViewUsage
+    Name="VContratView1"
+    ViewObjectName="model.view.VContratView"/>
+  <ViewUsage
+    Name="VContratView2"
+    ViewObjectName="model.view.VContratView"/>
+  <ViewUsage
+    Name="VHotelView1"
+    ViewObjectName="model.view.VHotelView"/>
+  <ViewUsage
+    Name="VHotelView2"
+    ViewObjectName="model.view.VHotelView"/>
+  <ViewUsage
+    Name="VVoyageView1"
+    ViewObjectName="model.view.VVoyageView"/>
+  <ViewUsage
+    Name="VContratView3"
+    ViewObjectName="model.view.VContratView"/>
+  <ViewUsage
+    Name="VHotelView3"
+    ViewObjectName="model.view.VHotelView"/>
+  <ViewUsage
+    Name="VVoyageView2"
+    ViewObjectName="model.view.VVoyageView"/>
+  <ViewLinkUsage
+    Name="VClientClinoFkLink1"
+    ViewLinkObjectName="model.view.link.VClientClinoFkLink"
+    SrcViewUsageName="model.AppModule.VClientView1"
+    DstViewUsageName="model.AppModule.VContratView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="VVoyageVoynoFkLink"
+    ViewLinkObjectName="model.view.link.VVoyageVoynoFkLink"
+    SrcViewUsageName="model.AppModule.VVoyageView1"
+    DstViewUsageName="model.AppModule.VContratView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="VHotelHotnoFkLink"
+    ViewLinkObjectName="model.view.link.VHotelHotnoFkLink"
+    SrcViewUsageName="model.AppModule.VHotelView3"
+    DstViewUsageName="model.AppModule.VVoyageView2"
+    Reversed="false"/>
+</AppModule>

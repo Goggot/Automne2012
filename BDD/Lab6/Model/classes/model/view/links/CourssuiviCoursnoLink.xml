@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CourssuiviCoursnoLink"
+  Version="11.1.2.60.81"
+  EntityAssociation="model.entities.assoc.CourssuiviCoursnoAssoc">
+  <ViewLinkDefEnd
+    Name="ECoursView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.ECoursView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ECoursView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.ECoursView.Coursno"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="ECourssuiviView"
+    Cardinality="-1"
+    Owner="model.view.ECourssuiviView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ECourssuiviView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.ECourssuiviView.Coursno"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

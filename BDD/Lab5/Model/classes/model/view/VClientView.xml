@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VClientView"
+  Version="11.1.2.60.81"
+  SelectList="VClient.CLINO, 
+       VClient.CLIPRENOM, 
+       VClient.CLINOM, 
+       VClient.CLIRUE, 
+       VClient.CLIVILLE, 
+       VClient.CLITELEPHONE"
+  FromList="V_CLIENT VClient"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="model.view.VClientViewRowImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="VClient"
+    Entity="model.entities.VClient"/>
+  <ViewAttribute
+    Name="Clino"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Clino"
+    EntityUsage="VClient"
+    AliasName="CLINO"/>
+  <ViewAttribute
+    Name="Cliprenom"
+    PrecisionRule="true"
+    EntityAttrName="Cliprenom"
+    EntityUsage="VClient"
+    AliasName="CLIPRENOM"/>
+  <ViewAttribute
+    Name="Clinom"
+    PrecisionRule="true"
+    EntityAttrName="Clinom"
+    EntityUsage="VClient"
+    AliasName="CLINOM"/>
+  <ViewAttribute
+    Name="Clirue"
+    PrecisionRule="true"
+    EntityAttrName="Clirue"
+    EntityUsage="VClient"
+    AliasName="CLIRUE"/>
+  <ViewAttribute
+    Name="Cliville"
+    PrecisionRule="true"
+    EntityAttrName="Cliville"
+    EntityUsage="VClient"
+    AliasName="CLIVILLE"/>
+  <ViewAttribute
+    Name="Clitelephone"
+    PrecisionRule="true"
+    EntityAttrName="Clitelephone"
+    EntityUsage="VClient"
+    AliasName="CLITELEPHONE"/>
+  <ViewLinkAccessor
+    Name="VContratView"
+    ViewLink="model.view.link.VClientClinoFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProgrammeView"
+  Version="11.1.2.60.81"
+  SelectList="EProgramme.STATUT, 
+       EProgramme.SANCTION, 
+       EProgramme.PROGNO"
+  FromList="E_PROGRAMME EProgramme"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.view.ProgrammeView_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <EntityUsage
+    Name="EProgramme"
+    Entity="model.entities.EProgramme"/>
+  <ViewAttribute
+    Name="Statut"
+    PrecisionRule="true"
+    EntityAttrName="Statut"
+    EntityUsage="EProgramme"
+    AliasName="STATUT"/>
+  <ViewAttribute
+    Name="Sanction"
+    PrecisionRule="true"
+    EntityAttrName="Sanction"
+    EntityUsage="EProgramme"
+    AliasName="SANCTION"/>
+  <ViewAttribute
+    Name="Progno"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Progno"
+    EntityUsage="EProgramme"
+    AliasName="PROGNO"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

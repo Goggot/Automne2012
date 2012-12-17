@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PrognoetuproLink"
+  Version="11.1.2.60.81"
+  EntityAssociation="model.entities.assoc.PrognoetuproAssoc">
+  <ViewLinkDefEnd
+    Name="EProgrammeView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.EProgrammeView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EProgrammeView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.EProgrammeView.Progno"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="EEtudiantView"
+    Cardinality="-1"
+    Owner="model.view.EEtudiantView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EEtudiantView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.EEtudiantView.Progno"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

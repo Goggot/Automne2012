@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ECours"
+  Version="11.1.2.60.81"
+  DBObjectType="table"
+  DBObjectName="E_COURS"
+  AliasName="ECours"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="Coursno"
+    IsNotNull="true"
+    Precision="7"
+    ColumnName="COURSNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_COURS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Coursnom"
+    Precision="75"
+    ColumnName="COURSNOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="E_COURS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="75"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Coursnbh"
+    Precision="3"
+    Scale="0"
+    ColumnName="COURSNBH"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="E_COURS"/>
+  <Attribute
+    Name="Coursnbcr"
+    Precision="2"
+    Scale="0"
+    ColumnName="COURSNBCR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="E_COURS"/>
+  <AccessorAttribute
+    Name="ECourssuivi"
+    Association="model.entities.assoc.CourssuiviCoursnoAssoc"
+    AssociationEnd="model.entities.assoc.CourssuiviCoursnoAssoc.ECourssuivi"
+    AssociationOtherEnd="model.entities.assoc.CourssuiviCoursnoAssoc.ECours"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EProgcours"
+    Association="model.entities.assoc.CournoAssoc"
+    AssociationEnd="model.entities.assoc.CournoAssoc.EProgcours"
+    AssociationOtherEnd="model.entities.assoc.CournoAssoc.ECours"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="CoursCoursnoCheck">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="COURS_COURSNO_CHECK"/>
+      <Attr Name="_checkCondition" Value="COURSNO IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="CoursPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="COURS_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.ECours.Coursno"/>
+    </AttrArray>
+  </Key>
+</Entity>

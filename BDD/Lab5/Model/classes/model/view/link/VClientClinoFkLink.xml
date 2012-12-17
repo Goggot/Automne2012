@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VClientClinoFkLink"
+  Version="11.1.2.60.81"
+  EntityAssociation="model.entities.assoc.VClientClinoFkAssoc">
+  <ViewLinkDefEnd
+    Name="VClientView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.view.VClientView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="VClientView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.VClientView.Clino"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="VContratView"
+    Cardinality="-1"
+    Owner="model.view.VContratView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="VContratView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.view.VContratView.Clino"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
