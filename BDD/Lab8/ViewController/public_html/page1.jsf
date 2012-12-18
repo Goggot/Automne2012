@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="page1.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                       id="pt1">
+        <f:facet name="center">
+          <af:panelSplitter id="ps1" orientation="vertical">
+            <f:facet name="first">
+              <af:panelCollection id="pc1">
+                <f:facet name="menus"/>
+                <f:facet name="toolbar"/>
+                <f:facet name="statusbar"/>
+                <af:table value="#{bindings.SCustomerView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SCustomerView1.rangeSize}"
+                          emptyText="#{bindings.SCustomerView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SCustomerView1.rangeSize}"
+                          rowBandingInterval="0"
+                          filterModel="#{bindings.SCustomerView1Query.queryDescriptor}"
+                          queryListener="#{bindings.SCustomerView1Query.processQuery}"
+                          filterVisible="true" varStatus="vs"
+                          selectedRowKeys="#{bindings.SCustomerView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SCustomerView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1"
+                          partialTriggers=":::cb1 :::cb2 :::cb3 :::cb4">
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Id.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Id.label}"
+                             id="c1">
+                    <af:outputText value="#{row.Id}" id="ot13">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SCustomerView1.hints.Id.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Name.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Name.label}"
+                             id="c2">
+                    <af:outputText value="#{row.Name}" id="ot14"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Phone.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Phone.label}"
+                             id="c3">
+                    <af:outputText value="#{row.Phone}" id="ot15"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Address.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Address.label}"
+                             id="c4">
+                    <af:outputText value="#{row.Address}" id="ot16"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.City.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.City.label}"
+                             id="c5">
+                    <af:outputText value="#{row.City}" id="ot17"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.State.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.State.label}"
+                             id="c6">
+                    <af:outputText value="#{row.State}" id="ot18"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Country.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Country.label}"
+                             id="c7">
+                    <af:outputText value="#{row.Country}" id="ot19"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.ZipCode.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.ZipCode.label}"
+                             id="c8">
+                    <af:outputText value="#{row.ZipCode}" id="ot20"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.CreditRating.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.CreditRating.label}"
+                             id="c9">
+                    <af:outputText value="#{row.CreditRating}" id="ot21"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.SalesRepId.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.SalesRepId.label}"
+                             id="c10">
+                    <af:outputText value="#{row.SalesRepId}" id="ot22">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SCustomerView1.hints.SalesRepId.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.RegionId.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.RegionId.label}"
+                             id="c11">
+                    <af:outputText value="#{row.RegionId}" id="ot23">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SCustomerView1.hints.RegionId.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SCustomerView1.hints.Comments.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SCustomerView1.hints.Comments.label}"
+                             id="c12">
+                    <af:outputText value="#{row.Comments}" id="ot24"/>
+                  </af:column>
+                </af:table>
+              </af:panelCollection>
+            </f:facet>
+            <f:facet name="second">
+              <af:panelTabbed id="pt2">
+                <af:showDetailItem text="showDetailItem 2" id="sdi2">
+                  <af:panelFormLayout id="pfl2">
+                    <af:inputText value="#{bindings.Id.inputValue}"
+                                  label="#{bindings.Id.hints.label}"
+                                  required="#{bindings.Id.hints.mandatory}"
+                                  columns="#{bindings.Id.hints.displayWidth}"
+                                  maximumLength="#{bindings.Id.hints.precision}"
+                                  shortDesc="#{bindings.Id.hints.tooltip}"
+                                  id="it1">
+                      <f:validator binding="#{bindings.Id.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.Id.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Name.inputValue}"
+                                  label="#{bindings.Name.hints.label}"
+                                  required="#{bindings.Name.hints.mandatory}"
+                                  columns="#{bindings.Name.hints.displayWidth}"
+                                  maximumLength="#{bindings.Name.hints.precision}"
+                                  shortDesc="#{bindings.Name.hints.tooltip}"
+                                  id="it2">
+                      <f:validator binding="#{bindings.Name.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Phone.inputValue}"
+                                  label="#{bindings.Phone.hints.label}"
+                                  required="#{bindings.Phone.hints.mandatory}"
+                                  columns="#{bindings.Phone.hints.displayWidth}"
+                                  maximumLength="#{bindings.Phone.hints.precision}"
+                                  shortDesc="#{bindings.Phone.hints.tooltip}"
+                                  id="it3">
+                      <f:validator binding="#{bindings.Phone.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Address.inputValue}"
+                                  label="#{bindings.Address.hints.label}"
+                                  required="#{bindings.Address.hints.mandatory}"
+                                  columns="#{bindings.Address.hints.displayWidth}"
+                                  maximumLength="#{bindings.Address.hints.precision}"
+                                  shortDesc="#{bindings.Address.hints.tooltip}"
+                                  id="it4">
+                      <f:validator binding="#{bindings.Address.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.City.inputValue}"
+                                  label="#{bindings.City.hints.label}"
+                                  required="#{bindings.City.hints.mandatory}"
+                                  columns="#{bindings.City.hints.displayWidth}"
+                                  maximumLength="#{bindings.City.hints.precision}"
+                                  shortDesc="#{bindings.City.hints.tooltip}"
+                                  id="it5">
+                      <f:validator binding="#{bindings.City.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.State.inputValue}"
+                                  label="#{bindings.State.hints.label}"
+                                  required="#{bindings.State.hints.mandatory}"
+                                  columns="#{bindings.State.hints.displayWidth}"
+                                  maximumLength="#{bindings.State.hints.precision}"
+                                  shortDesc="#{bindings.State.hints.tooltip}"
+                                  id="it6">
+                      <f:validator binding="#{bindings.State.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Country.inputValue}"
+                                  label="#{bindings.Country.hints.label}"
+                                  required="#{bindings.Country.hints.mandatory}"
+                                  columns="#{bindings.Country.hints.displayWidth}"
+                                  maximumLength="#{bindings.Country.hints.precision}"
+                                  shortDesc="#{bindings.Country.hints.tooltip}"
+                                  id="it7">
+                      <f:validator binding="#{bindings.Country.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.ZipCode.inputValue}"
+                                  label="#{bindings.ZipCode.hints.label}"
+                                  required="#{bindings.ZipCode.hints.mandatory}"
+                                  columns="#{bindings.ZipCode.hints.displayWidth}"
+                                  maximumLength="#{bindings.ZipCode.hints.precision}"
+                                  shortDesc="#{bindings.ZipCode.hints.tooltip}"
+                                  id="it8">
+                      <f:validator binding="#{bindings.ZipCode.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.CreditRating.inputValue}"
+                                  label="#{bindings.CreditRating.hints.label}"
+                                  required="#{bindings.CreditRating.hints.mandatory}"
+                                  columns="#{bindings.CreditRating.hints.displayWidth}"
+                                  maximumLength="#{bindings.CreditRating.hints.precision}"
+                                  shortDesc="#{bindings.CreditRating.hints.tooltip}"
+                                  id="it9">
+                      <f:validator binding="#{bindings.CreditRating.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.SalesRepId.inputValue}"
+                                  label="#{bindings.SalesRepId.hints.label}"
+                                  required="#{bindings.SalesRepId.hints.mandatory}"
+                                  columns="#{bindings.SalesRepId.hints.displayWidth}"
+                                  maximumLength="#{bindings.SalesRepId.hints.precision}"
+                                  shortDesc="#{bindings.SalesRepId.hints.tooltip}"
+                                  id="it10">
+                      <f:validator binding="#{bindings.SalesRepId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SalesRepId.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.RegionId.inputValue}"
+                                  label="#{bindings.RegionId.hints.label}"
+                                  required="#{bindings.RegionId.hints.mandatory}"
+                                  columns="#{bindings.RegionId.hints.displayWidth}"
+                                  maximumLength="#{bindings.RegionId.hints.precision}"
+                                  shortDesc="#{bindings.RegionId.hints.tooltip}"
+                                  id="it11">
+                      <f:validator binding="#{bindings.RegionId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.RegionId.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Comments.inputValue}"
+                                  label="#{bindings.Comments.hints.label}"
+                                  required="#{bindings.Comments.hints.mandatory}"
+                                  columns="#{bindings.Comments.hints.displayWidth}"
+                                  maximumLength="#{bindings.Comments.hints.precision}"
+                                  shortDesc="#{bindings.Comments.hints.tooltip}"
+                                  id="it12">
+                      <f:validator binding="#{bindings.Comments.validator}"/>
+                    </af:inputText>
+                    <f:facet name="footer">
+                      <af:commandButton text="Submit" id="cb5"/>
+                    </f:facet>
+                  </af:panelFormLayout>
+                </af:showDetailItem>
+              </af:panelTabbed>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+        <f:facet name="header"/>
+        <f:facet name="start">
+          <af:panelAccordion id="pa1">
+            <af:showDetailItem text="showDetailItem 1" id="sdi1">
+              <af:panelFormLayout id="pfl1">
+                <af:panelLabelAndMessage label="#{bindings.Id.hints.label}"
+                                         id="plam1">
+                  <af:outputText value="#{bindings.Id.inputValue}" id="ot1">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.Id.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Name.hints.label}"
+                                         id="plam2">
+                  <af:outputText value="#{bindings.Name.inputValue}"
+                                 id="ot2"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Phone.hints.label}"
+                                         id="plam3">
+                  <af:outputText value="#{bindings.Phone.inputValue}"
+                                 id="ot3"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Address.hints.label}"
+                                         id="plam4">
+                  <af:outputText value="#{bindings.Address.inputValue}"
+                                 id="ot4"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.City.hints.label}"
+                                         id="plam5">
+                  <af:outputText value="#{bindings.City.inputValue}"
+                                 id="ot5"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.State.hints.label}"
+                                         id="plam6">
+                  <af:outputText value="#{bindings.State.inputValue}"
+                                 id="ot6"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Country.hints.label}"
+                                         id="plam7">
+                  <af:outputText value="#{bindings.Country.inputValue}"
+                                 id="ot7"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.ZipCode.hints.label}"
+                                         id="plam8">
+                  <af:outputText value="#{bindings.ZipCode.inputValue}"
+                                 id="ot8"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.CreditRating.hints.label}"
+                                         id="plam9">
+                  <af:outputText value="#{bindings.CreditRating.inputValue}"
+                                 id="ot9"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.SalesRepId.hints.label}"
+                                         id="plam10">
+                  <af:outputText value="#{bindings.SalesRepId.inputValue}"
+                                 id="ot10">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.SalesRepId.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.RegionId.hints.label}"
+                                         id="plam11">
+                  <af:outputText value="#{bindings.RegionId.inputValue}"
+                                 id="ot11">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.RegionId.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Comments.hints.label}"
+                                         id="plam12">
+                  <af:outputText value="#{bindings.Comments.inputValue}"
+                                 id="ot12"/>
+                </af:panelLabelAndMessage>
+                <f:facet name="footer">
+                  <af:panelGroupLayout layout="horizontal" id="pgl1">
+                    <f:facet name="separator">
+                      <af:spacer width="10" height="1" id="s1"/>
+                    </f:facet>
+                    <af:commandButton actionListener="#{bindings.First.execute}"
+                                      text="First"
+                                      disabled="#{!bindings.First.enabled}"
+                                      partialSubmit="true" id="cb1"/>
+                    <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                      text="Previous"
+                                      disabled="#{!bindings.Previous.enabled}"
+                                      partialSubmit="true" id="cb2"/>
+                    <af:commandButton actionListener="#{bindings.Next.execute}"
+                                      text="Next"
+                                      disabled="#{!bindings.Next.enabled}"
+                                      partialSubmit="true" id="cb3"/>
+                    <af:commandButton actionListener="#{bindings.Last.execute}"
+                                      text="Last"
+                                      disabled="#{!bindings.Last.enabled}"
+                                      partialSubmit="true" id="cb4"/>
+                  </af:panelGroupLayout>
+                </f:facet>
+              </af:panelFormLayout>
+            </af:showDetailItem>
+          </af:panelAccordion>
+        </f:facet>
+        <f:facet name="branding"/>
+        <f:facet name="copyright"/>
+        <f:facet name="status"/>
+        <f:attribute name="startColumnSize" value="350"/>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

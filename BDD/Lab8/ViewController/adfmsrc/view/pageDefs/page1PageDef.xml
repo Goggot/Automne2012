@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="page1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SCustomerView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="SCustomerView1Iterator" ChangeEventPolicy="ppr"/>
+    <searchRegion Binds="SCustomerView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SCustomerView1Query"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Id">
+      <AttrNames>
+        <Item Value="Id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Phone">
+      <AttrNames>
+        <Item Value="Phone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="ZipCode">
+      <AttrNames>
+        <Item Value="ZipCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="CreditRating">
+      <AttrNames>
+        <Item Value="CreditRating"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="SalesRepId">
+      <AttrNames>
+        <Item Value="SalesRepId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="RegionId">
+      <AttrNames>
+        <Item Value="RegionId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SCustomerView1Iterator" id="Comments">
+      <AttrNames>
+        <Item Value="Comments"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SCustomerView1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="SCustomerView1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="SCustomerView1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="SCustomerView1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="SCustomerView1Iterator" id="SCustomerView1">
+      <nodeDefinition DefName="model.views.SCustomerView"
+                      Name="SCustomerView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Phone"/>
+          <Item Value="Address"/>
+          <Item Value="City"/>
+          <Item Value="State"/>
+          <Item Value="Country"/>
+          <Item Value="ZipCode"/>
+          <Item Value="CreditRating"/>
+          <Item Value="SalesRepId"/>
+          <Item Value="RegionId"/>
+          <Item Value="Comments"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
