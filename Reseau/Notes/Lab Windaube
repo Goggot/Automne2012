@@ -1,0 +1,13 @@
+Lab Serveur
+
+1- 529P37
+
+2- 	PCI		INTEL		00-1B-21-A9-4D-AB
+	OnBoard		INTEL82579L	00-22-4D-4D-E8-91	\Device\Tcpip_{1A7B025D-E103-452D-A131-116B41DCA65A
+	
+3- a) 529P37\administrateur
+5- Les adresses internet, les adresses physiques reliés et le type de connexion
+6- a) On peut dire qu'ARP trouve l'adresse WAN pour chaque adresse MAC.
+   b) adresse virtuelle
+   c) masque sous-reseau / broadcom
+

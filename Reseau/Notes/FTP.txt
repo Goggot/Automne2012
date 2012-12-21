@@ -1,0 +1,3 @@
+port 21 : port de controle
+Methode active : le serveur prend le contrôle, il envoie les demande de contrôle, il ne répond pas, donc rien ne passe à travers (port 20)
+methode passive : le client envoie les requetes, puis le serveur analyse

@@ -1,0 +1,119 @@
+
+			Reseau
+			
+L01 A Révision classe
+
+Adresse IP : 1ère --> identifier le reseau	dernière --> broadcast
+
+1- b)
+2- 
+3- a) b) c) 
+4- d) 249
+5- b) 11100001
+6- c) Classe C
+7- c) 65534
+8- c) Classe C
+9- réseau séparés --> routeur (les masques (3 premiers nombres) sont différents)
+10- même réseau
+11- réseau séparés, classe différente --> vu que chacune des adresses ne connait pas le masque de l'autre, 
+						le masque de la personne qui envoie est utilisé
+
+
+CIDR --> enlève le masque par defaut, et permet de séparer les adresses autant que l'on veut
+
+Classe B 1.2.3.4/16
+Si CIDR appliqué --> 1.2.3.4
+
+						
+L01 B Sous-réseau de même taille
+
+1- a) 4 bits de plus (puissance de 2 obligatoirement)
+   b) 16 sous-reseau
+   c) 28 bits : 255.255.255.240 	255 = 24 bits --> 28 bits = 11110000 = 240
+   
+2- a) 5
+   b) 32
+   c) 29
+   d) 255.255.255.248
+   e) 3
+   f) 8-2 = 6
+   
+DNS : architecture hierarchique distribué
+   
+(POINT) .racine
+TLD : Top Level Domain
+	--> gTLD : generic...
+	--> ccTLD : country code... --> .ca .uk .fr --> 235 
+
+	11 root servers a travers le monde pour les gouverner tous ! (au début)
+   
+Le DNS est resolu point par point : interrogations récursive depuis la gauche : 
+	Ex: www.cvm.qc.ca
+		- Est-ce que com existe ? Si oui, retourne les adresse NS des serveurs root le connaissant
+		- Est-ce que qc existe ? Si oui, retourne les adresse
+		- Est-ce que cvm existe ? Si oui, retourne les adresse
+		- Est-ce que l'IP relier a l'adresse existe ?
+		- Si oui, le premier atteignant le site provoque un CACHE, pour les suivants,
+					qui n'auront pas besoin de refaire tout le trajet 
+								(toute les 15-30-40 min habituellement)
+
+Zone de recherche inverse : ARPA
+RR : enregistrement de ressources
+	A : ipv4
+	AAAA : ipv6
+	MX
+	CN : alias vers adresse IP
+								
+nslookup : commande de verification : interroge un serveur dns 
+			(celui inscrit dans config de l'ordi, par defaut)
+
+S1 : IIS
+S2 : DNS 
+
+
+Création DNS se fait en 2 grosses étapes :
+	- Création de l'enregistrement A et de la délégation sur le serveur parent
+	- Création du domaine sur le serveur qui héberge
+	
+Étapes détaillées
+	1- Créer zone
+	2- Ajouter enregistrement A avec infos de ce serveur (1)
+	3- Modifier correctement les propriétés de la zone
+	4- Modifier Serveur de nom avec le même nom de Serveur Principal (complet) et l'adresse ip utilisé precedement 
+	5- ajouter un domaine
+	6- ajouter enregistrement A dans le nouveau domaine
+	7- ajouter une délégation dans la zone, avec les infos du serveur distant
+	
+	8- Sur serveur distant, créer nouvelle zone avec nom complet du premier serveur (domaine.zone)
+	9- Créer enregistrement A avec infos de ce serveur (2)
+	10- Modifier correctement les propriétés de la zone
+	
+Répertoires virtuels :
+	section du site pointant physiquement sur un endroit distant
+
+Site Entête : 
+	adip:80:nom FQDN du site
+		10.57.54.7:80:www.ut.us
+		10.57.54.7:80:w3.domaine1.b54
+		
+Routeur :
+
+	PAT
+	NAT	: 
+		emetteur : 192.168.0.4:49584 (par exemple)
+		destination : 204.19.2.20:80
+		retour impossible, parce que 192... est une adresse privée, donc NAT fait :
+			remplace par l'adresse publique du routeur
+	masquerade
+
+	Ce dont à besoin un ordi dans un lan :
+		- plan d'adressage
+		- adresse ip
+		- passerelle
+		
+	DHCP : adresse entre 100 et 200
+	Pour avoir une adresse fixe, prendre en dessous de 100.
+	
+	adresse publique : 70.1.2.3/8
+	adresse privée : 192.168.2.15/24
+		
