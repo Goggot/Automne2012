@@ -9,3 +9,4 @@ Responsable Modele : Maxime
 Programmeurs d'exception : - Augustin
 			   - Shioui
 			   - Erwan
+			   - Maxime
