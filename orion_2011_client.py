@@ -59,7 +59,7 @@ class Controleur(object):
         cwd=os.getcwd()
         testJMServeur=cwd+"\\"+"orion_2011_serveur.py"
         #pid = Popen([p, testJMServeur]).pid
-        pid = Popen(["C:\\Python32\\Python.exe", "orion_2011_serveur.py"]).pid
+        pid = Popen(["python3", "orion_2011_serveur.py"]).pid
         self.serveurLocal=1
         return pid
         
@@ -96,7 +96,7 @@ class Controleur(object):
     def changeCible(self,monid,x,y):
         self.actions.append([self.nom,"changeCible",[monid,x,y]])
     
-    # ******  SECTION d'appels automatique        
+    # ******  SECTION d'appels automatique
     def timerAttend(self):
         #print("attente1")
         if self.serveur:
