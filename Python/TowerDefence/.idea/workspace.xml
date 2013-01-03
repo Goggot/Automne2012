@@ -37,7 +37,7 @@
       <file leaf-file-name="Controleur.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controleur.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="68" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.6443914">
+            <state line="54" column="48" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.30429596">
               <folding />
             </state>
           </provider>
@@ -63,17 +63,16 @@
     <option name="changedFiles">
       <list>
         <option value="$USER_HOME$/Downloads/ProjetTD2012/Vue1.py" />
-        <option value="$PROJECT_DIR$/Controleur.py" />
         <option value="$PROJECT_DIR$/Vue.py" />
         <option value="$PROJECT_DIR$/Modele.py" />
+        <option value="$PROJECT_DIR$/Controleur.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1282" />
-    <option name="height" value="998" />
+    <option name="width" value="1280" />
+    <option name="height" value="997" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -89,7 +88,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -100,16 +99,28 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TowerDefence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ProjetTD2012/Controleur1.py" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -250,7 +261,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1282" height="998" extended-state="6" />
+    <frame x="0" y="27" width="1280" height="997" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -334,6 +345,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="68" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="51" selection-start="7698" selection-end="7698" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="29" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="168" column="51" selection-start="7698" selection-end="7698" vertical-scroll-proportion="0.0">
@@ -385,7 +417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="68" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.6443914">
+        <state line="54" column="48" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.30429596">
           <folding />
         </state>
       </provider>

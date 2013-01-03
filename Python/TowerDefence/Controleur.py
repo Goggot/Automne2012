@@ -52,7 +52,7 @@ class Controleur():
         if self.vue.frameScore:
             self.vue.frameScore.destroy()
         if self.modele.nivoActif.vie > 0:
-            if self.pause != True:            # Si le jeu n'est pas en pause
+            if self.pause != True:              # Si le jeu n'est pas en pause
                 self.modele.nivoActif.present = time.time() - self.dureePause
                     
                 if (self.modele.nivoActif.present - self.dernierCreep) > self.vitesseCreep:
