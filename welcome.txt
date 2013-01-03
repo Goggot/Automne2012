@@ -1,3 +1,11 @@
-Inscris ton nom:
+Team Leader : Nicolas Waucheul
 
-Nathael
+Responsable réseau : Marc Paquin
+
+Responsable Vue : Nath
+
+Responsable Modele : Maxime
+
+Programmeurs d'exception : - Augustin
+			   - Shioui
+			   - Erwan
