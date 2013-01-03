@@ -9,6 +9,6 @@ Responsable Vue : Nath
 Responsable Modele : Maxime
 
 Programmeurs d'exception : - Augustin
-			   - Shi ui
+			   - Shi Hui
 			   - Erwan
 			   - Maxime
