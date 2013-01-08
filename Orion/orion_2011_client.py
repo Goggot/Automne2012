@@ -51,11 +51,8 @@ class Controleur(object):
         #s=input("3")
         
     def creerServeur(self):
-        if platform.python_version_tuple()[0]=='3':
-            p="python"
-        else:
-            p="python"
-        print("PPPPP ",p)
+        
+        #print("PPPPP ",p)
         cwd=os.getcwd()
         testJMServeur=cwd+"\\"+"orion_2011_serveur.py"
         #pid = Popen([p, testJMServeur]).pid
