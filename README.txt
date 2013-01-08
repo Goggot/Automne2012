@@ -2,7 +2,7 @@
 
 Team Leader : Nicolas Waucheul
 
-Responsable réseau : Marc Paquin (test de bitbucket, 17:21 8 Jan 2013)
+Responsable réseau : Marc Paquin (test de bitbucket, 17:24 8 Jan 2013)
 
 Responsable Vue : Nath
 
