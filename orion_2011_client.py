@@ -59,7 +59,7 @@ class Controleur(object):
         cwd=os.getcwd()
         testJMServeur=cwd+"\\"+"orion_2011_serveur.py"
         #pid = Popen([p, testJMServeur]).pid
-        pid = Popen(["python3", "orion_2011_serveur.py"]).pid
+        pid = Popen(["python", "orion_2011_serveur.py"]).pid
         self.serveurLocal=1
         return pid
         
