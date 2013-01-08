@@ -21,7 +21,9 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationLevelMavenPOMContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="../../../AppletExamen1/AppletExamen1.jpr"/></hash>
       <hash><url n="URL" path="Client/Client.jpr"/></hash>
+      <hash><url n="URL" path="Examen1Num6/Examen1Num6.jpr"/></hash>
       <hash><url n="URL" path="FeuSignalisation/FeuSignalisation.jpr"/></hash>
       <hash><url n="URL" path="ProjetAppletDebut/ProjetAppletDebut.jpr"/></hash>
       <hash><url n="URL" path="ProjetGUI/ProjetGUI.jpr"/></hash>

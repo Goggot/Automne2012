@@ -102,7 +102,7 @@ public class Num3
     champHuit.addActionListener(ec);
     champNeuf.addActionListener(ec);
     /*
-    Component[] tab = jPanel1.getComponent();
+    Component[] tab = jPanel1.getComponents();
     for (int i=0; i< tab.length; i++)
       if (tab[i].instanceof(JButton))
           ((JButton)tab[i]).addActionListener(ec);
