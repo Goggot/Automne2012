@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="untitled1.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                       id="pt1">
+        <f:facet name="center">
+          <af:panelSplitter id="ps1" orientation="vertical">
+            <f:facet name="first">
+              <af:panelCollection id="pc1">
+                <f:facet name="menus"/>
+                <f:facet name="toolbar"/>
+                <f:facet name="statusbar"/>
+                <af:table value="#{bindings.SEmpView1.collectionModel}"
+                          var="row" rows="#{bindings.SEmpView1.rangeSize}"
+                          emptyText="#{bindings.SEmpView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SEmpView1.rangeSize}"
+                          rowBandingInterval="0"
+                          filterModel="#{bindings.SEmpView1Query.queryDescriptor}"
+                          queryListener="#{bindings.SEmpView1Query.processQuery}"
+                          filterVisible="true" varStatus="vs"
+                          selectedRowKeys="#{bindings.SEmpView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SEmpView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1">
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.Id.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.Id.label}"
+                             id="c1">
+                    <af:outputText value="#{row.Id}" id="ot1">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SEmpView1.hints.Id.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.LastName.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.LastName.label}"
+                             id="c2">
+                    <af:outputText value="#{row.LastName}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.FirstName.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.FirstName.label}"
+                             id="c3">
+                    <af:outputText value="#{row.FirstName}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.Userid.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.Userid.label}"
+                             id="c4">
+                    <af:outputText value="#{row.Userid}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.StartDate.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.StartDate.label}"
+                             id="c5">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{vs.filterCriteria.StartDate}"
+                                    id="id1">
+                        <af:convertDateTime pattern="#{bindings.SEmpView1.hints.StartDate.format}"/>
+                      </af:inputDate>
+                    </f:facet>
+                    <af:outputText value="#{row.StartDate}" id="ot5">
+                      <af:convertDateTime pattern="#{bindings.SEmpView1.hints.StartDate.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.Comments.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.Comments.label}"
+                             id="c6">
+                    <af:outputText value="#{row.Comments}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.ManagerId.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.ManagerId.label}"
+                             id="c7">
+                    <af:outputText value="#{row.ManagerId}" id="ot7">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SEmpView1.hints.ManagerId.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.Title.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.Title.label}"
+                             id="c8">
+                    <af:outputText value="#{row.Title}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.DeptId.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.DeptId.label}"
+                             id="c9">
+                    <af:outputText value="#{row.DeptId}" id="ot9">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SEmpView1.hints.DeptId.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.Salary.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.Salary.label}"
+                             id="c10">
+                    <af:outputText value="#{row.Salary}" id="ot10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SEmpView1.hints.CommissionPct.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.SEmpView1.hints.CommissionPct.label}"
+                             id="c11">
+                    <af:outputText value="#{row.CommissionPct}" id="ot11"/>
+                  </af:column>
+                </af:table>
+              </af:panelCollection>
+            </f:facet>
+            <f:facet name="second">
+              <af:panelTabbed id="pt2">
+                <af:showDetailItem text="showDetailItem 3" id="sdi3">
+                  <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.ProductId.inputValue}"
+                                  label="#{bindings.ProductId.hints.label}"
+                                  required="#{bindings.ProductId.hints.mandatory}"
+                                  columns="#{bindings.ProductId.hints.displayWidth}"
+                                  maximumLength="#{bindings.ProductId.hints.precision}"
+                                  shortDesc="#{bindings.ProductId.hints.tooltip}"
+                                  id="it1">
+                      <f:validator binding="#{bindings.ProductId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ProductId.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.WarehouseId.inputValue}"
+                                  label="#{bindings.WarehouseId.hints.label}"
+                                  required="#{bindings.WarehouseId.hints.mandatory}"
+                                  columns="#{bindings.WarehouseId.hints.displayWidth}"
+                                  maximumLength="#{bindings.WarehouseId.hints.precision}"
+                                  shortDesc="#{bindings.WarehouseId.hints.tooltip}"
+                                  id="it2">
+                      <f:validator binding="#{bindings.WarehouseId.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.WarehouseId.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.AmountInStock.inputValue}"
+                                  label="#{bindings.AmountInStock.hints.label}"
+                                  required="#{bindings.AmountInStock.hints.mandatory}"
+                                  columns="#{bindings.AmountInStock.hints.displayWidth}"
+                                  maximumLength="#{bindings.AmountInStock.hints.precision}"
+                                  shortDesc="#{bindings.AmountInStock.hints.tooltip}"
+                                  id="it3">
+                      <f:validator binding="#{bindings.AmountInStock.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.AmountInStock.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.ReorderPoint.inputValue}"
+                                  label="#{bindings.ReorderPoint.hints.label}"
+                                  required="#{bindings.ReorderPoint.hints.mandatory}"
+                                  columns="#{bindings.ReorderPoint.hints.displayWidth}"
+                                  maximumLength="#{bindings.ReorderPoint.hints.precision}"
+                                  shortDesc="#{bindings.ReorderPoint.hints.tooltip}"
+                                  id="it4">
+                      <f:validator binding="#{bindings.ReorderPoint.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ReorderPoint.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.MaxInStock.inputValue}"
+                                  label="#{bindings.MaxInStock.hints.label}"
+                                  required="#{bindings.MaxInStock.hints.mandatory}"
+                                  columns="#{bindings.MaxInStock.hints.displayWidth}"
+                                  maximumLength="#{bindings.MaxInStock.hints.precision}"
+                                  shortDesc="#{bindings.MaxInStock.hints.tooltip}"
+                                  id="it5">
+                      <f:validator binding="#{bindings.MaxInStock.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.MaxInStock.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.OutOfStockExplanation.inputValue}"
+                                  label="#{bindings.OutOfStockExplanation.hints.label}"
+                                  required="#{bindings.OutOfStockExplanation.hints.mandatory}"
+                                  columns="#{bindings.OutOfStockExplanation.hints.displayWidth}"
+                                  maximumLength="#{bindings.OutOfStockExplanation.hints.precision}"
+                                  shortDesc="#{bindings.OutOfStockExplanation.hints.tooltip}"
+                                  id="it6">
+                      <f:validator binding="#{bindings.OutOfStockExplanation.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.RestockDate.inputValue}"
+                                  label="#{bindings.RestockDate.hints.label}"
+                                  required="#{bindings.RestockDate.hints.mandatory}"
+                                  columns="#{bindings.RestockDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.RestockDate.hints.tooltip}"
+                                  id="id2">
+                      <f:validator binding="#{bindings.RestockDate.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.RestockDate.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.quantiteDispo.inputValue}"
+                                  label="#{bindings.quantiteDispo.hints.label}"
+                                  required="#{bindings.quantiteDispo.hints.mandatory}"
+                                  columns="#{bindings.quantiteDispo.hints.displayWidth}"
+                                  maximumLength="#{bindings.quantiteDispo.hints.precision}"
+                                  shortDesc="#{bindings.quantiteDispo.hints.tooltip}"
+                                  id="it7">
+                      <f:validator binding="#{bindings.quantiteDispo.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.quantiteDispo.format}"/>
+                    </af:inputText>
+                    <f:facet name="footer">
+                      <af:panelGroupLayout layout="vertical" id="pgl1">
+                        <af:panelGroupLayout layout="horizontal" id="pgl2">
+                          <f:facet name="separator">
+                            <af:spacer width="10" height="1" id="s1"/>
+                          </f:facet>
+                          <af:commandButton actionListener="#{bindings.First.execute}"
+                                            text="First"
+                                            disabled="#{!bindings.First.enabled}"
+                                            partialSubmit="true" id="cb1"/>
+                          <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                            text="Previous"
+                                            disabled="#{!bindings.Previous.enabled}"
+                                            partialSubmit="true" id="cb2"/>
+                          <af:commandButton actionListener="#{bindings.Next.execute}"
+                                            text="Next"
+                                            disabled="#{!bindings.Next.enabled}"
+                                            partialSubmit="true" id="cb3"/>
+                          <af:commandButton actionListener="#{bindings.Last.execute}"
+                                            text="Last"
+                                            disabled="#{!bindings.Last.enabled}"
+                                            partialSubmit="true" id="cb4"/>
+                        </af:panelGroupLayout>
+                        <af:commandButton text="Submit" id="cb5"/>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                  </af:panelFormLayout>
+                </af:showDetailItem>
+              </af:panelTabbed>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+        <f:facet name="header"/>
+        <f:facet name="branding"/>
+        <f:facet name="copyright"/>
+        <f:facet name="status"/>
+        <f:attribute name="startColumnSize" value="225"/>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

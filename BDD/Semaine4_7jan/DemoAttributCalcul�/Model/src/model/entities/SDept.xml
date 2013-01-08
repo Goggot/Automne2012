@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SDept"
+  Version="11.1.1.51.88"
+  DBObjectType="table"
+  DBObjectName="S_DEPT"
+  AliasName="SDept"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    Precision="7"
+    Scale="0"
+    ColumnName="ID"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    SQLType="NUMERIC"
+    TableName="S_DEPT"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="25"
+    ColumnName="NAME"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    SQLType="VARCHAR"
+    TableName="S_DEPT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegionId"
+    IsUnique="true"
+    Precision="7"
+    Scale="0"
+    ColumnName="REGION_ID"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    SQLType="NUMERIC"
+    TableName="S_DEPT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="SEmp"
+    Association="model.entities.SEmpDeptIdFkAssoc"
+    AssociationEnd="model.entities.SEmpDeptIdFkAssoc.SEmp"
+    AssociationOtherEnd="model.entities.SEmpDeptIdFkAssoc.SDept"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="SRegion"
+    Association="model.entities.SDeptRegionIdFkAssoc"
+    AssociationEnd="model.entities.SDeptRegionIdFkAssoc.SRegion"
+    AssociationOtherEnd="model.entities.SDeptRegionIdFkAssoc.SDept"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SDeptIdNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="S_DEPT_ID_NN"/>
+      <Attr Name="_checkCondition" Value='"ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SDept.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SDeptIdPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="S_DEPT_ID_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SDept.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SDeptNameNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="S_DEPT_NAME_NN"/>
+      <Attr Name="_checkCondition" Value='"NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SDept.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SDeptNameRegionIdUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="S_DEPT_NAME_REGION_ID_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SDept.Name"/>
+      <Item Value="model.entities.SDept.RegionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SDeptRegionIdFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="S_REGION_ID_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="S_DEPT_REGION_ID_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SDept.RegionId"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -50,7 +50,7 @@
       Name="Phone_Rule_1"
       ResId="model.entities.SCustomer.Phone_Rule_1"
       OnAttribute="Phone"
-      Pattern="([1-9]{3})[1-9]{3}-[1-9]{4}"
+      Pattern="\([1-9]{3}\)[1-9]{3}-[1-9]{4}"
       Inverse="false"/>
   </Attribute>
   <Attribute
@@ -168,6 +168,11 @@ Cannes"/>
       CompareType="EQUALTO"
       CompareValue="model.views.SRegionView.Id"
       ResId="model.entities.SCustomer.RegionId_Rule_1"/>
+    <validation:ExistsValidationBean
+      Name="RegionId_Rule_1"
+      ResId="model.entities.SCustomer.RegionId_Rule_2"
+      OperandType="EO"
+      AssocName="model.entities.assoc.SCustomerRegionIdFkAssoc"/>
   </Attribute>
   <Attribute
     Name="Comments"

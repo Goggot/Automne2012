@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.51.56" id="pageTranscient1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <iterator Binds="SInventoryView1" RangeSize="25"
+              DataControl="AppModuleDataControl" id="SInventoryView1Iterator"
+              ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SInventoryView1Iterator" id="ProductId">
+      <AttrNames>
+        <Item Value="ProductId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SInventoryView1Iterator" id="WarehouseId">
+      <AttrNames>
+        <Item Value="WarehouseId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SInventoryView1Iterator" id="AmountInStock">
+      <AttrNames>
+        <Item Value="AmountInStock"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SInventoryView1Iterator" id="ReorderPoint">
+      <AttrNames>
+        <Item Value="ReorderPoint"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SInventoryView1Iterator" id="quantiteRelle">
+      <AttrNames>
+        <Item Value="quantiteRelle"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SInventoryView1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="SInventoryView1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="SInventoryView1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="SInventoryView1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

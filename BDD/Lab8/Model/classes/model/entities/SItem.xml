@@ -9,7 +9,8 @@
   DBObjectName="S_ITEM"
   AliasName="SItem"
   BindingStyle="OracleName"
-  UseGlueCode="false">
+  UseGlueCode="false"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="OrdId"
     IsUnique="true"
@@ -70,7 +71,16 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_ITEM"/>
+    TableName="S_ITEM">
+    <validation:CompareValidationBean
+      Name="QuantityShipped_Rule_0"
+      ResId="model.entities.SItem.QuantityShipped_Rule_0"
+      OnAttribute="QuantityShipped"
+      OperandType="JBO"
+      Inverse="false"
+      CompareType="LESSTHANEQUALTO"
+      CompareValue="model.views.SItemView.Quantity"/>
+  </Attribute>
   <AccessorAttribute
     Name="SOrd"
     Association="model.entities.assoc.SItemOrdIdFkAssoc"
@@ -149,4 +159,8 @@
       <Item Value="model.entities.SItem.ProductId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

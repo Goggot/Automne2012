@@ -36,6 +36,12 @@
   <ViewUsage
     Name="SOrdView3"
     ViewObjectName="model.views.SOrdView"/>
+  <ViewUsage
+    Name="SRegionView1"
+    ViewObjectName="model.views.SRegionView"/>
+  <ViewUsage
+    Name="SCustomerView3"
+    ViewObjectName="model.views.SCustomerView"/>
   <ViewLinkUsage
     Name="SEmpManagerIdFkLink1"
     ViewLinkObjectName="model.views.links.SEmpManagerIdFkLink"
@@ -65,5 +71,11 @@
     ViewLinkObjectName="model.views.links.SOrdSalesRepIdFkLink"
     SrcViewUsageName="model.AppModule.SEmpView1"
     DstViewUsageName="model.AppModule.SOrdView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SCustomerRegionIdFkLink"
+    ViewLinkObjectName="model.views.links.SCustomerRegionIdFkLink"
+    SrcViewUsageName="model.AppModule.SRegionView1"
+    DstViewUsageName="model.AppModule.SCustomerView3"
     Reversed="false"/>
 </AppModule>

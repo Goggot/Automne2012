@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.2.60.81"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="SDeptView1"
+    ViewObjectName="model.views.SDeptView"/>
+  <ViewUsage
+    Name="SEmpView1"
+    ViewObjectName="model.views.SEmpView"/>
+  <ViewUsage
+    Name="SEmpView2"
+    ViewObjectName="model.views.SEmpView"/>
+  <ViewUsage
+    Name="SEmpView3"
+    ViewObjectName="model.views.SEmpView"/>
+  <ViewLinkUsage
+    Name="SEmpManagerIdFkLink1"
+    ViewLinkObjectName="model.views.SEmpManagerIdFkLink"
+    SrcViewUsageName="model.ModuleApplication.AppModule.SEmpView1"
+    DstViewUsageName="model.ModuleApplication.AppModule.SEmpView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SEmpDeptIdFkLink1"
+    ViewLinkObjectName="model.views.SEmpDeptIdFkLink"
+    SrcViewUsageName="model.ModuleApplication.AppModule.SDeptView1"
+    DstViewUsageName="model.ModuleApplication.AppModule.SEmpView3"
+    Reversed="false"/>
+</AppModule>

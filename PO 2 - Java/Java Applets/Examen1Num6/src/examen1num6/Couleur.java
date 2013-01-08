@@ -74,15 +74,10 @@ public class Couleur
 
     Ecouteur ec = new Ecouteur();
     
-    /*Component[] tab = panelBoutons.getComponents();
+    Component[] tab = panelBoutons.getComponents();
     for (int i=0; i< tab.length; i++)
-      if (tab[i].instanceof(JButton))   // instanceof ne fonctione pas
-        ((JButton)tab[i]).addActionListener(ec);*/
-    
-    boutonVert.addActionListener(ec);
-    boutonGris.addActionListener(ec);
-    boutonBleu.addActionListener(ec);
-    boutonVider.addActionListener(ec);
+      if (tab[i] instanceof JButton)   // instanceof ne fonctione pas
+        ((JButton)tab[i]).addActionListener(ec);
   }
   private class Ecouteur implements ActionListener
   {

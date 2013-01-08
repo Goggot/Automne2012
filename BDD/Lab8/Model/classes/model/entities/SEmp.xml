@@ -9,7 +9,8 @@
   DBObjectName="S_EMP"
   AliasName="SEmp"
   BindingStyle="OracleName"
-  UseGlueCode="false">
+  UseGlueCode="false"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Id"
     IsNotNull="true"
@@ -65,7 +66,27 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Timestamp"
     ColumnType="DATE"
-    TableName="S_EMP"/>
+    TableName="S_EMP">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.entities.SEmp.StartDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.entities.SEmp.StartDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <validation:CompareValidationBean
+      Name="StartDate_Rule_0"
+      ResId="model.entities.SEmp.StartDate_Rule_0"
+      OnAttribute="StartDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHAN">
+      <validation:TransientExpression><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
+  </Attribute>
   <Attribute
     Name="Comments"
     Precision="255"
@@ -116,7 +137,18 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="S_EMP"/>
+    TableName="S_EMP">
+    <validation:ExpressionValidationBean
+      Name="Salary_Rule_0"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:MsgIds>
+        <validation:Item
+          Value="errorId2"/>
+      </validation:MsgIds>
+      <validation:TransientExpression><![CDATA[(Title == "Stock Clerk" ? Salary < 22000 : Salary < 0)]]></validation:TransientExpression>
+    </validation:ExpressionValidationBean>
+  </Attribute>
   <Attribute
     Name="CommissionPct"
     Precision="4"
@@ -125,7 +157,25 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="S_EMP"/>
+    TableName="S_EMP">
+    <validation:ExpressionValidationBean
+      Name="CommissionPct_Rule_0"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:MsgIds>
+        <validation:Item
+          Value="errorId1"/>
+      </validation:MsgIds>
+      <validation:TransientExpression><![CDATA[if (Title == "Sale Representative")
+{
+return false
+}
+else
+{
+return true
+}]]></validation:TransientExpression>
+    </validation:ExpressionValidationBean>
+  </Attribute>
   <AccessorAttribute
     Name="SEmp"
     Association="model.entities.assoc.SEmpManagerIdFkAssoc"
@@ -235,4 +285,8 @@
       <Item Value="model.entities.SEmp.Title"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

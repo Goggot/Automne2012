@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document>
+      <af:messages/>
+      <af:form>
+        <af:panelFormLayout>
+          <af:inputText value="#{bindings.ProductId.inputValue}"
+                        label="#{bindings.ProductId.hints.label}"
+                        required="#{bindings.ProductId.hints.mandatory}"
+                        columns="#{bindings.ProductId.hints.displayWidth}"
+                        maximumLength="#{bindings.ProductId.hints.precision}"
+                        shortDesc="#{bindings.ProductId.hints.tooltip}">
+            <f:validator binding="#{bindings.ProductId.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.ProductId.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.WarehouseId.inputValue}"
+                        label="#{bindings.WarehouseId.hints.label}"
+                        required="#{bindings.WarehouseId.hints.mandatory}"
+                        columns="#{bindings.WarehouseId.hints.displayWidth}"
+                        maximumLength="#{bindings.WarehouseId.hints.precision}"
+                        shortDesc="#{bindings.WarehouseId.hints.tooltip}">
+            <f:validator binding="#{bindings.WarehouseId.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.WarehouseId.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.AmountInStock.inputValue}"
+                        label="#{bindings.AmountInStock.hints.label}"
+                        required="#{bindings.AmountInStock.hints.mandatory}"
+                        columns="#{bindings.AmountInStock.hints.displayWidth}"
+                        maximumLength="#{bindings.AmountInStock.hints.precision}"
+                        shortDesc="#{bindings.AmountInStock.hints.tooltip}"
+                        autoSubmit="true">
+            <f:validator binding="#{bindings.AmountInStock.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.AmountInStock.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.ReorderPoint.inputValue}"
+                        label="#{bindings.ReorderPoint.hints.label}"
+                        required="#{bindings.ReorderPoint.hints.mandatory}"
+                        columns="#{bindings.ReorderPoint.hints.displayWidth}"
+                        maximumLength="#{bindings.ReorderPoint.hints.precision}"
+                        shortDesc="#{bindings.ReorderPoint.hints.tooltip}"
+                        autoSubmit="true">
+            <f:validator binding="#{bindings.ReorderPoint.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.ReorderPoint.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.quantiteRelle.inputValue}"
+                        label="#{bindings.quantiteRelle.hints.label}"
+                        required="#{bindings.quantiteRelle.hints.mandatory}"
+                        columns="#{bindings.quantiteRelle.hints.displayWidth}"
+                        maximumLength="#{bindings.quantiteRelle.hints.precision}"
+                        shortDesc="#{bindings.quantiteRelle.hints.tooltip}">
+            <f:validator binding="#{bindings.quantiteRelle.validator}"/>
+            <af:convertNumber groupingUsed="false"
+                              pattern="#{bindings.quantiteRelle.format}"/>
+          </af:inputText>
+          <f:facet name="footer">
+            <af:panelGroupLayout layout="vertical">
+              <af:panelGroupLayout layout="horizontal">
+                <af:commandButton actionListener="#{bindings.First.execute}"
+                                  text="First"
+                                  disabled="#{!bindings.First.enabled}"
+                                  partialSubmit="true"/>
+                <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                  text="Previous"
+                                  disabled="#{!bindings.Previous.enabled}"
+                                  partialSubmit="true"/>
+                <af:commandButton actionListener="#{bindings.Next.execute}"
+                                  text="Next"
+                                  disabled="#{!bindings.Next.enabled}"
+                                  partialSubmit="true"/>
+                <af:commandButton actionListener="#{bindings.Last.execute}"
+                                  text="Last"
+                                  disabled="#{!bindings.Last.enabled}"
+                                  partialSubmit="true"/>
+              </af:panelGroupLayout>
+              <af:commandButton text="Submit"/>
+              <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                text="Commit"
+                                disabled="#{!bindings.Commit.enabled}"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelFormLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -9,7 +9,8 @@
   DBObjectName="S_INVENTORY"
   AliasName="SInventory"
   BindingStyle="OracleName"
-  UseGlueCode="false">
+  UseGlueCode="false"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="ProductId"
     IsNotNull="true"
@@ -40,7 +41,16 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_INVENTORY"/>
+    TableName="S_INVENTORY">
+    <validation:CompareValidationBean
+      Name="AmountInStock_Rule_0"
+      ResId="model.entities.SInventory.AmountInStock_Rule_0"
+      OnAttribute="AmountInStock"
+      OperandType="JBO"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="model.views.SInventoryView.ReorderPoint"/>
+  </Attribute>
   <Attribute
     Name="ReorderPoint"
     Precision="9"
@@ -58,7 +68,16 @@
     SQLType="NUMERIC"
     Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="S_INVENTORY"/>
+    TableName="S_INVENTORY">
+    <validation:RangeValidationBean
+      Name="MaxInStock_Rule_1"
+      ResId="model.entities.SInventory.MaxInStock_Rule_1"
+      OnAttribute="MaxInStock"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="0"
+      MaxValue="10000"/>
+  </Attribute>
   <Attribute
     Name="OutOfStockExplanation"
     Precision="255"
@@ -129,4 +148,8 @@
       <Item Value="model.entities.SInventory.WarehouseId"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
