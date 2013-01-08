@@ -52,7 +52,7 @@ class Controleur(object):
         
     def creerServeur(self):
         if platform.python_version_tuple()[0]=='3':
-            p="python3"
+            p="python"
         else:
             p="python"
         print("PPPPP ",p)
