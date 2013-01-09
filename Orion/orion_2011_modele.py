@@ -14,7 +14,7 @@ class Etoile(object):
         self.creePlanetes()
         
     def creePlanetes(self):
-        n=random.randrange(3) #Chaque étoile a une chance sur 3 de n'avoir aucune planete
+        n=random.randrange(3) #Chaque etoile a une chance sur 3 de n'avoir aucune planete
         if n>0:
             tmin=self.taille*3
             tmax=self.taille*20
@@ -171,7 +171,7 @@ class Modele(object):
         
         
         couleurs=["red","blue","green","yellow","orange","purple"]
-        n=0
+        nbJoueurs=0
         
         
         #Cree chaque joueur(joueur=civilisation) en leur
@@ -180,19 +180,20 @@ class Modele(object):
             x=random.randrange(self.paramPartie["x_espace"])
             y=random.randrange(self.paramPartie["y_espace"])
             id=Modele.nextId()
-            s=1
-            #Cree 1 etoile tant qu'elle n'a pas 0 planetes
-            #Nb de planetes etantinitialisee ak un random
+            etoileMereNonTrouvee=1
+            #Cree 1 etoile tant qu'elle n'a pas 0 planetes,
+            #nb de planetes etant initialisee ak un random
             #dans init de la classe Etoile
-            while s:
-                e=Etoile(self,id,x,y)
-                if len(e.planetes):
-                    s=0
-            print("NOM",j)        
-            p=e.planetes[random.randrange(len(e.planetes))]
-            self.etoiles.append(e)
-            self.civs[j]=Civ(self,j,e,p,couleurs[n])
-            n=n+1
+            while etoileMereNonTrouvee:
+                etoileMere=Etoile(self,id,x,y)
+                if len(etoileMere.planetes):
+                    etoileMereNonTrouvee=0
+            print("NOM",j)
+            #Selectionne une planete mere dans l'etoile mere        
+            planeteMere=etoileMere.planetes[random.randrange(len(etoileMere.planetes))]
+            self.etoiles.append(etoileMere)
+            self.civs[j]=Civ(self,j,etoileMere,planeteMere,couleurs[n])
+            nbJoueurs=nbJoueurs+1
 
         
     def creerVaisseau(self,):
@@ -200,13 +201,17 @@ class Modele(object):
         y=random.randrange(self.parent.hauteur_espace)
         random.seed(self.rdseed)
         self.actions.append(["creerVaisseau",[self.nom,x,y]])
-        self.creerEtoiles()
         
+        
+        """
+        #self.creerEtoiles()
+    
     def creerEtoiles(self):
         for i in range(2000):
             x=random.randrange(self.parent.largeur_espace)
             y=random.randrange(self.parent.hauteur_espace)
             self.etoiles.append(Etoile(self,x,y))
+    """
         
     def prochaineAction(self,cadre):
         if cadre in self.actionsAFaire:
