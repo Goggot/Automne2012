@@ -5,7 +5,7 @@ import tkinter.simpledialog as sd
 import tkinter.messagebox as mb
 import random
 
-class Buttonjm(Button):
+class Buttonjm(Button): #Modele de bouton pour qu'ils soient tous pareils
     def __init__(self,parent,**kw):
         f=Font(size=7,slant="italic",weight="bold")
         kw["font"]=f
@@ -13,7 +13,8 @@ class Buttonjm(Button):
         kw["bg"]="grey25"
         kw["relief"]="groove"
         Button.__init__(self,parent,**kw)
-class Labeljm(Label):
+        
+class Labeljm(Label): #Modele de label pour qu'ils soient tous pareils
     def __init__(self,parent,**kw):
         f=Font(size=7)
         kw["font"]=f
@@ -27,7 +28,7 @@ class Vue(object):
     def __init__(self,parent,x,y,x_espace,y_espace):
         self.parent=parent
         self.modele=self.parent.modele
-        self.selection=[]
+        self.selection=[] #Objet selectionné par l'usager
         self.con=0
         self.x=x
         self.y=y
@@ -37,7 +38,7 @@ class Vue(object):
         self.root.protocol('WM_DELETE_WINDOW', self.intercepteFermeture)
         self.cadreActif=0
         self.perspective=""
-        self.perspectives={}
+        self.perspectives={} #Vue cosmos, systeme solaire, planete, etc
         self.perspectiveCourante=None
         self.canevasCourant=None
         self.selections=[]
@@ -45,7 +46,7 @@ class Vue(object):
         #self.ecranPartie(x,y,x_espace,y_espace)
         self.placeCadre(self.cadreConnection)
 
-    def creeCadres(self):
+    def creeCadres(self): #Créer les cadres
         self.creeCadreConnection()
         self.creeCadreAttente()
         self.creeCadrePartie()
@@ -55,7 +56,7 @@ class Vue(object):
         self.cadrePartie.rowconfigure(1,weight=1)
         self.cadrePartie.columnconfigure(0,weight=1)
         
-        self.creeCadreMenuPartie()
+        self.creeCadreMenuPartie() #Cadres de jeu
         self.creeCadreInfoCiv()
         self.creeCadreCosmos()
         self.creeCadreEspace()
@@ -89,13 +90,13 @@ class Vue(object):
         self.cadreInfoCiv.grid_propagate(0)
         
         
-    def creeCadreCosmos(self):
+    def creeCadreCosmos(self): #Création du cadre cosmos
         self.cadreCosmos=Frame(self.cadrePartie)
         self.cadreCosmos.rowconfigure(0,weight=1)
         self.cadreCosmos.columnconfigure(0,weight=1)
 
-        sy=Scrollbar(self.cadreCosmos,orient=VERTICAL)
-        sx=Scrollbar(self.cadreCosmos,orient=HORIZONTAL)
+        sy=Scrollbar(self.cadreCosmos,orient=VERTICAL) #Ajout de scrollbars
+        sx=Scrollbar(self.cadreCosmos,orient=HORIZONTAL) #Ajout de scrollbars
         self.canevasCosmos=Canvas(self.cadreCosmos,width=self.x,height=self.y,
                             xscrollcommand=sx.set,yscrollcommand=sy.set,bd=0,
                             scrollregion=(0,0,self.x,self.y),bg="grey15")
@@ -108,7 +109,7 @@ class Vue(object):
         self.canevasCosmos.bind("<Button-1>",self.selectObject)
         self.canevasCosmos.bind("<Configure>",self.initCosmos)
         
-    def selectObject(self,evt):
+    def selectObject(self,evt): #Selectionner un objet
         t=self.canevasCourant.gettags(CURRENT)
         if t:
             if "vaisseau" in t:

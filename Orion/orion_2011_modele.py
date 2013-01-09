@@ -14,7 +14,7 @@ class Etoile(object):
         self.creePlanetes()
         
     def creePlanetes(self):
-        n=random.randrange(3)
+        n=random.randrange(3) #Chaque étoile a une chance sur 3 de n'avoir aucune planete
         if n>0:
             tmin=self.taille*3
             tmax=self.taille*20
