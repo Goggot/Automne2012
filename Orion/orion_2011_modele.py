@@ -29,7 +29,7 @@ class Etoile(object):
                     diry=1
                 x=random.randrange(tmin,tmax)*dirx
                 y=random.randrange(tmin,tmax)*diry
-                t=random.randrange(10)+1
+                t=random.randrange(10)+1 #Initialise la taille de la planete
                 self.planetes.append(Planete(self,x,y,t)) #Ajoute la planete creee a la liste de planete
                 
         
@@ -39,8 +39,8 @@ class Planete(object):
         self.x=x
         self.y=y
         self.taille=t
-        self.minerai=random.randrange(self.taille)*10000
-        self.energie=random.randrange(self.taille)*1000000
+        self.minerai=random.randrange(self.taille)*10000 #Initialise le minerai disponible
+        self.energie=random.randrange(self.taille)*1000000 #Initialise l'energie disponible (a verifier)
         self.artefacts={"batiment":[],
                        "extracteur":[]
                        }
@@ -64,14 +64,14 @@ class Civ(object):
         self.actions={"changeCible":self.changeCible,}
         
                        
-    def changeCible(self,par):
+    def changeCible(self,par): #Change la selection du joueur
         id,x,y=par
         for i in self.artefacts["vaisseau"]:
             if id==i.id:
                 i.changeCible(x,y)
                 print("CHANGER VAISSEAU CIBLE")
                 
-    def prochaineAction(self):
+    def prochaineAction(self): #Assigne la prochaine action a effectuer sur le frame disponible suivant (A verifier)
         print("NO ",self.parent.parent.cadre)
         for i in self.artefacts.keys():
             for j in self.artefacts[i]:
@@ -182,7 +182,7 @@ class Modele(object):
             id=Modele.nextId()
             s=1
             #Cree 1 etoile tant qu'elle n'a pas 0 planetes
-            #Nb de planetes etantinitialisee ak un random
+            #Nb de planetes etant initialisee avec un random
             #dans init de la classe Etoile
             while s:
                 e=Etoile(self,id,x,y)
