@@ -14,13 +14,13 @@ class Etoile(object):
         self.creePlanetes()
         
     def creePlanetes(self):
-        n=random.randrange(3)
-        if n>0:
-            tmin=self.taille*3
+        n=random.randrange(3) #Chaque etoile a une chance sur 3 de n'avoir aucune planete
+        if n>0: #Si l'etoile possede des planetes
+            tmin=self.taille*3 
             tmax=self.taille*20
-            np=random.randrange(10)
+            np=random.randrange(10) #Cree un nombre random de planetes
             
-            for i in range(np):
+            for i in range(np): #Pour chaque planete
                 dirx=random.randrange(2)-1
                 if dirx==0:
                     dirx=1
@@ -29,8 +29,8 @@ class Etoile(object):
                     diry=1
                 x=random.randrange(tmin,tmax)*dirx
                 y=random.randrange(tmin,tmax)*diry
-                t=random.randrange(10)+1
-                self.planetes.append(Planete(self,x,y,t))
+                t=random.randrange(10)+1 #Initialise la taille de la planete
+                self.planetes.append(Planete(self,x,y,t)) #Ajoute la planete creee a la liste de planete
                 
         
 class Planete(object):
@@ -39,8 +39,8 @@ class Planete(object):
         self.x=x
         self.y=y
         self.taille=t
-        self.minerai=random.randrange(self.taille)*10000
-        self.energie=random.randrange(self.taille)*1000000
+        self.minerai=random.randrange(self.taille)*10000 #Initialise le minerai disponible
+        self.energie=random.randrange(self.taille)*1000000 #Initialise l'energie disponible (a verifier)
         self.artefacts={"batiment":[],
                        "extracteur":[]
                        }
@@ -64,14 +64,14 @@ class Civ(object):
         self.actions={"changeCible":self.changeCible,}
         
                        
-    def changeCible(self,par):
+    def changeCible(self,par): #Change la selection du joueur
         id,x,y=par
         for i in self.artefacts["vaisseau"]:
             if id==i.id:
                 i.changeCible(x,y)
                 print("CHANGER VAISSEAU CIBLE")
                 
-    def prochaineAction(self):
+    def prochaineAction(self): #Assigne la prochaine action a effectuer sur le frame disponible suivant (A verifier)
         print("NO ",self.parent.parent.cadre)
         for i in self.artefacts.keys():
             for j in self.artefacts[i]:
@@ -160,27 +160,40 @@ class Modele(object):
         self.etoiles=[]
         
     def initPartie(self,listeNomsJoueurs):
+        #on cree toutes les etoiles en leur assignant une
+        #position xy et un id. On les ajoute ensuite a la liste
+        #des etoiles du modele
         for i in range(self.paramPartie["etoiles"]):
             x=random.randrange(self.paramPartie["x_espace"])
             y=random.randrange(self.paramPartie["y_espace"])
             id=Modele.nextId()
             self.etoiles.append(Etoile(self,id,x,y))
+        
+        
         couleurs=["red","blue","green","yellow","orange","purple"]
-        n=0
+        nbJoueurs=0
+        
+        
+        #Cree chaque joueur(joueur=civilisation) en leur
+        #assignant id,position xy. Cree leur etoile mere.
         for j in listeNomsJoueurs:
             x=random.randrange(self.paramPartie["x_espace"])
             y=random.randrange(self.paramPartie["y_espace"])
             id=Modele.nextId()
-            s=1
-            while s:
-                e=Etoile(self,id,x,y)
-                if len(e.planetes):
-                    s=0
-            print("NOM",j)        
-            p=e.planetes[random.randrange(len(e.planetes))]
-            self.etoiles.append(e)
-            self.civs[j]=Civ(self,j,e,p,couleurs[n])
-            n=n+1
+            etoileMereNonTrouvee=1
+            #Cree 1 etoile tant qu'elle n'a pas 0 planetes,
+            #nb de planetes etant initialisee ak un random
+            #dans init de la classe Etoile
+            while etoileMereNonTrouvee:
+                etoileMere=Etoile(self,id,x,y)
+                if len(etoileMere.planetes):
+                    etoileMereNonTrouvee=0
+            print("NOM",j)
+            #Selectionne une planete mere dans l'etoile mere        
+            planeteMere=etoileMere.planetes[random.randrange(len(etoileMere.planetes))]
+            self.etoiles.append(etoileMere)
+            self.civs[j]=Civ(self,j,etoileMere,planeteMere,couleurs[n])
+            nbJoueurs=nbJoueurs+1
 
         
     def creerVaisseau(self,):
@@ -188,13 +201,17 @@ class Modele(object):
         y=random.randrange(self.parent.hauteur_espace)
         random.seed(self.rdseed)
         self.actions.append(["creerVaisseau",[self.nom,x,y]])
-        self.creerEtoiles()
         
+        
+        """
+        #self.creerEtoiles()
+    
     def creerEtoiles(self):
         for i in range(2000):
             x=random.randrange(self.parent.largeur_espace)
             y=random.randrange(self.parent.hauteur_espace)
             self.etoiles.append(Etoile(self,x,y))
+    """
         
     def prochaineAction(self,cadre):
         if cadre in self.actionsAFaire:
