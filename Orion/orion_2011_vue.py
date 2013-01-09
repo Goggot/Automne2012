@@ -221,7 +221,7 @@ class Vue(object):
         
         trouveL=Frame(self.cadreCommandeCiv,height=10,bg="grey25")
         trouveL.grid(row=5,column=10,sticky=N)
-        trouveB=Buttonjm(self.cadreCommandeCiv,text="Trourve planetre",command=self.centrerPlanete)
+        trouveB=Buttonjm(self.cadreCommandeCiv,text="Trouve planetre",command=self.centrerPlanete)
         trouveB.grid(row=10,column=10,sticky=N)
         self.showB1=Buttonjm(self.cadreCommandeCiv,text="showPlanete",relief=GROOVE,command=self.showPlanete)
         self.showB1.grid(row=10,column=20,sticky=N)
