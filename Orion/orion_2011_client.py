@@ -51,11 +51,6 @@ class Controleur(object):
         #s=input("3")
         
     def creerServeur(self):
-        
-        #print("PPPPP ",p)
-        cwd=os.getcwd()
-        testJMServeur=cwd+"\\"+"orion_2011_serveur.py"
-        #pid = Popen([p, testJMServeur]).pid
         pid = Popen(["python", "orion_2011_serveur.py"]).pid
         self.serveurLocal=1
         return pid
