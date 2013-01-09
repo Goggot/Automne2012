@@ -46,14 +46,14 @@ class Planete(object):
                        }
         
 class Civ(object):
-    def __init__(self,parent,nom,e,p,couleur):
+    def __init__(self,parent,nom,etoileMere,planeteMere,couleur):
         self.parent=parent
         self.nom=nom
-        self.etoileMere=e
-        self.planeteMere=p
+        self.etoileMere=etoileMere
+        self.planeteMere=planeteMere
         self.couleur=couleur
-        self.planetesColonisees=[p]
-        self.etoilesVisites=[e]
+        self.planetesColonisees=[planeteMere]
+        self.etoilesVisites=[etoileMere]
         self.artefactsDecouverts=[]
         self.flottes=[]
         self.artefacts={"station":[Station(self,Modele.nextId())],
@@ -160,6 +160,10 @@ class Modele(object):
         self.etoiles=[]
         
     def initPartie(self,listeNomsJoueurs):
+        
+        random.seed(self.rdseed) #assigne un numero de random au modele pour que chaque joueur ait le meme random
+        
+        
         #on cree toutes les etoiles en leur assignant une
         #position xy et un id. On les ajoute ensuite a la liste
         #des etoiles du modele
@@ -170,7 +174,7 @@ class Modele(object):
             self.etoiles.append(Etoile(self,id,x,y))
         
         
-        couleurs=["red","blue","green","yellow","orange","purple"]
+        couleurs=["red","blue","green","yellow","orange","purple","grey","black"]
         nbJoueurs=0
         
         
@@ -196,23 +200,11 @@ class Modele(object):
             nbJoueurs=nbJoueurs+1
 
         
-    def creerVaisseau(self,):
+    def creerVaisseau(self):
         x=random.randrange(self.parent.largeur_espace)
         y=random.randrange(self.parent.hauteur_espace)
-        random.seed(self.rdseed)
         self.actions.append(["creerVaisseau",[self.nom,x,y]])
-        
-        
-        """
-        #self.creerEtoiles()
     
-    def creerEtoiles(self):
-        for i in range(2000):
-            x=random.randrange(self.parent.largeur_espace)
-            y=random.randrange(self.parent.hauteur_espace)
-            self.etoiles.append(Etoile(self,x,y))
-    """
-        
     def prochaineAction(self,cadre):
         if cadre in self.actionsAFaire:
             for i in self.actionsAFaire[cadre]:
