@@ -160,18 +160,30 @@ class Modele(object):
         self.etoiles=[]
         
     def initPartie(self,listeNomsJoueurs):
+        #on cree toutes les etoiles en leur assignant une
+        #position xy et un id. On les ajoute ensuite a la liste
+        #des etoiles du modele
         for i in range(self.paramPartie["etoiles"]):
             x=random.randrange(self.paramPartie["x_espace"])
             y=random.randrange(self.paramPartie["y_espace"])
             id=Modele.nextId()
             self.etoiles.append(Etoile(self,id,x,y))
+        
+        
         couleurs=["red","blue","green","yellow","orange","purple"]
         n=0
+        
+        
+        #Cree chaque joueur(joueur=civilisation) en leur
+        #assignant id,position xy. Cree leur etoile mere.
         for j in listeNomsJoueurs:
             x=random.randrange(self.paramPartie["x_espace"])
             y=random.randrange(self.paramPartie["y_espace"])
             id=Modele.nextId()
             s=1
+            #Cree 1 etoile tant qu'elle n'a pas 0 planetes
+            #Nb de planetes etantinitialisee ak un random
+            #dans init de la classe Etoile
             while s:
                 e=Etoile(self,id,x,y)
                 if len(e.planetes):
