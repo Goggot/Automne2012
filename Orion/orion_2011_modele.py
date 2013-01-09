@@ -14,13 +14,13 @@ class Etoile(object):
         self.creePlanetes()
         
     def creePlanetes(self):
-        n=random.randrange(3) #Chaque étoile a une chance sur 3 de n'avoir aucune planete
-        if n>0:
-            tmin=self.taille*3
+        n=random.randrange(3) #Chaque etoile a une chance sur 3 de n'avoir aucune planete
+        if n>0: #Si l'etoile possede des planetes
+            tmin=self.taille*3 
             tmax=self.taille*20
-            np=random.randrange(10)
+            np=random.randrange(10) #Cree un nombre random de planetes
             
-            for i in range(np):
+            for i in range(np): #Pour chaque planete
                 dirx=random.randrange(2)-1
                 if dirx==0:
                     dirx=1
@@ -30,7 +30,7 @@ class Etoile(object):
                 x=random.randrange(tmin,tmax)*dirx
                 y=random.randrange(tmin,tmax)*diry
                 t=random.randrange(10)+1
-                self.planetes.append(Planete(self,x,y,t))
+                self.planetes.append(Planete(self,x,y,t)) #Ajoute la planete creee a la liste de planete
                 
         
 class Planete(object):
