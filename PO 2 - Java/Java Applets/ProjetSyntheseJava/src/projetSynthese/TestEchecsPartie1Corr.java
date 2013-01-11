@@ -1,0 +1,152 @@
+
+// Copyright (c) 2000 CVM
+package projetSynthese;
+import org.junit.*;
+import static org.junit.Assert.*;
+/**
+ * packageTP3.TestEchecsPartie1
+ * <P>
+ * @author Département d'informatique
+ */
+public class TestEchecsPartie1Corr {
+
+  /**
+   * Constructor
+   */
+   
+
+
+ 
+ 
+ 
+   @Test
+  public void testRoi ()
+  {
+  Roi r1 = new Roi ("k", "noir" );
+  Position depart = new Position(3,4);
+  Position arrivee = new Position (4,5);
+
+  assertEquals ( true, r1.estValide(depart, arrivee ));
+  }
+@Test
+  public void testRoi2 ()
+  {
+    Roi r1 = new Roi ("k", "noir" );
+    Position depart = new Position ( 3,2 );
+    Position arrivee = new Position (6,2);
+    assertEquals ( false, r1.estValide(depart, arrivee ));
+  }
+@Test
+  public void testTour ()
+  {
+  Tour t1 = new Tour  ("t1", "noir" );
+  Position depart = new Position(5,5);
+  Position arrivee = new Position(3,1);
+  assertEquals ( false, t1.estValide( depart, arrivee ));
+  }
+@Test
+  public void testCavalier ()
+  {
+  Cavalier un = new Cavalier ( "c1","noir");
+  Position depart = new Position(3, 5);
+  Position arrivee = new Position(5, 4 );
+  assertEquals ( true, un.estValide ( depart, arrivee ));
+  }
+ @Test 
+  public void testCavalier2()
+  {
+    Cavalier deux = new Cavalier ( "c1","blanc");
+    Position depart = new Position (3,6);
+    Position arrivee = new Position ( 2,4);
+    assertEquals ( true , deux.estValide( depart, arrivee ));
+  }
+@Test
+  public void testPion1 ()
+  {
+  Pion deux = new Pion ("p1",  "noir" );
+  Position dep = new Position(4,4);
+  Position arr = new Position(6,6);
+  assertEquals ( false, deux.estValide( dep, arr ));
+  }
+
+@Test
+  public void testPion2 ()
+  {
+  Pion deux = new Pion ("p1", "noir");
+  Position dep = new Position(4,2);
+  Position arr = new Position(5,2);
+  assertEquals ( true, deux.estValide( dep, arr ));
+  }
+@Test
+  public void testPion3 ()
+  {
+  Pion deux = new Pion ( "p1","noir" );
+  Position dep = new Position(1,1);
+  Position arr = new Position(1,3);
+  assertEquals ( false, deux.estValide( dep, arr ));
+  }
+  
+@Test
+  public void testPion4 ()
+  {
+  Pion deux = new Pion ( "p1","blanc");
+  Position dep = new Position(1,1);
+  Position arr = new Position(2,1);
+  assertEquals ( false, deux.estValide( dep, arr ));
+  }
+@Test
+  public void testPion5 ()
+  {
+  Pion deux = new Pion ("p1","noir" );
+  Position dep = new Position(1,3);
+  Position arr = new Position(3,3);
+  assertEquals ( true, deux.estValide( dep, arr ));
+  }
+@Test
+  public void testFou1 ()
+  {
+  Fou deux = new Fou ( "p1", "noir" );
+  Position dep = new Position(1,4);
+  Position arr = new Position(3,6);
+  assertEquals ( true, deux.estValide( dep, arr ));
+  }
+@Test
+  public void testFou2 ()
+  {
+  Fou deux = new Fou ("p1","noir" );
+  Position dep = new Position(2,2);
+  Position arr = new Position(4,1);
+  assertEquals ( false, deux.estValide( dep, arr ));
+  }
+@Test
+  public void testReine1 ()
+  {
+  Reine r1 = new Reine("r", "blanc" );
+  Position depart = new Position(5,7);
+  Position arrivee = new Position(5,7);
+  assertEquals(true, r1.estValide( depart, arrivee ));
+  }
+@Test
+  public void testReine2 ()
+  {
+  Reine r1 = new Reine ( "r", "blanc");
+  Position depart = new Position(4,7);
+  Position arrivee = new Position(4,0);
+  assertEquals ( true, r1.estValide( depart, arrivee ));
+  }
+@Test
+  public void testReine3 ()
+  {
+  Reine r1 = new Reine ( "r","blanc");
+  Position depart = new Position(4,7);
+  Position arrivee = new Position(0,3);
+  assertEquals ( true, r1.estValide( depart, arrivee ));
+  }
+
+
+ 
+  public static void main ( String [] args ){
+    org.junit.runner.JUnitCore.main("projetSynthese.TestEchecsPartie1Corr");
+  }
+}
+
