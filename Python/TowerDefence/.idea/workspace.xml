@@ -37,7 +37,7 @@
       <file leaf-file-name="Controleur.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controleur.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="48" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.30429596">
+            <state line="72" column="51" selection-start="3149" selection-end="3149" vertical-scroll-proportion="1.2529833">
               <folding />
             </state>
           </provider>
@@ -117,7 +117,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -315,7 +315,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -417,7 +417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="48" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.30429596">
+        <state line="72" column="51" selection-start="3149" selection-end="3149" vertical-scroll-proportion="1.2529833">
           <folding />
         </state>
       </provider>
