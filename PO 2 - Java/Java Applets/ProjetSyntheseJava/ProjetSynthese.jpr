@@ -169,7 +169,7 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Junit-4.10.jar"/>
+            <value n="id" v="Junit-4.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -178,11 +178,20 @@
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url path="../../../../../.Oracle/Middleware/jdeveloper/jdev/lib/junit-4.10.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/.Oracle/Middleware/jdeveloper/jdev/lib/junit-4.10.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Junit-4.10.jar"/>
                <value n="id" v="Junit-4.10.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="jar" path="file:/K:/Données/B33i/junit4.5/junit-4.5.jar!/"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Junit-4.5.jar"/>
+               <value n="id" v="Junit-4.5.jar"/>
                <value n="locked" v="true"/>
             </hash>
          </list>
@@ -207,6 +216,10 @@
          </hash>
          <hash>
             <value n="id" v="Junit-4.10.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Junit-4.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
