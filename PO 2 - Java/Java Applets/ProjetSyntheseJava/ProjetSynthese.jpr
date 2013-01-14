@@ -169,7 +169,7 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Junit-4.11.jar"/>
+            <value n="id" v="Junit-4.10.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -178,20 +178,11 @@
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url protocol="jar" path="file:/K:/Données/B33i/junit4.5/junit-4.5.jar!/"/>
+                  <url path="../../../../../.Oracle/Middleware/jdeveloper/jdev/lib/junit-4.10.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Junit-4.5.jar"/>
-               <value n="id" v="Junit-4.5.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../../junit4.11/junit-4.11.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Junit-4.11.jar"/>
-               <value n="id" v="Junit-4.11.jar"/>
+               <value n="description" v="Junit-4.10.jar"/>
+               <value n="id" v="Junit-4.10.jar"/>
                <value n="locked" v="true"/>
             </hash>
          </list>
@@ -207,18 +198,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="junit3.8"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../junit3.8/junit3.8.1/JUnit.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../junit3.8/junit3.8.1/JUnit.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="MDS Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -227,11 +206,7 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Junit-4.5.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Junit-4.11.jar"/>
+            <value n="id" v="Junit-4.10.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
