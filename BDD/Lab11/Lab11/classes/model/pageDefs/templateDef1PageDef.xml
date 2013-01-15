@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="templateDef1PageDef"
+                Package="model.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="HrJobsView1_1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="HrJobsView1_1Iterator"/>
+    <iterator Binds="HrLocationsView1_1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="HrLocationsView1_1Iterator"/>
+    <iterator Binds="HrCountriesView1_1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="HrCountriesView1_1Iterator"/>
+    <iterator Binds="HrDepartmentsView1_1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="HrDepartmentsView1_1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="HrJobsView1_1Iterator" id="HrJobsView1_1">
+      <nodeDefinition DefName="model.HrJobsView1" Name="HrJobsView1_10"/>
+    </tree>
+    <tree IterBinding="HrLocationsView1_1Iterator" id="HrLocationsView1_1">
+      <nodeDefinition DefName="model.HrLocationsView1"
+                      Name="HrLocationsView1_10"/>
+    </tree>
+    <tree IterBinding="HrCountriesView1_1Iterator" id="HrCountriesView1_1">
+      <nodeDefinition DefName="model.HrCountriesView1"
+                      Name="HrCountriesView1_10"/>
+    </tree>
+    <tree IterBinding="HrDepartmentsView1_1Iterator"
+          id="HrDepartmentsView1_1">
+      <nodeDefinition DefName="model.HrDepartmentsView1"
+                      Name="HrDepartmentsView1_10"/>
+    </tree>
+  </bindings>
+</pageDefinition>

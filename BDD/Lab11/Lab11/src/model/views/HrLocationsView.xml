@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrLocationsView"
+  Version="11.1.2.60.81"
+  SelectList="HrLocations.LOCATION_ID, 
+       HrLocations.STREET_ADDRESS, 
+       HrLocations.POSTAL_CODE, 
+       HrLocations.CITY, 
+       HrLocations.STATE_PROVINCE, 
+       HrLocations.COUNTRY_ID"
+  FromList="HR_LOCATIONS HrLocations"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="HrLocations"
+    Entity="model.entities.HrLocations"/>
+  <ViewAttribute
+    Name="LocationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="LocationId"
+    EntityUsage="HrLocations"
+    AliasName="LOCATION_ID"/>
+  <ViewAttribute
+    Name="StreetAddress"
+    PrecisionRule="true"
+    EntityAttrName="StreetAddress"
+    EntityUsage="HrLocations"
+    AliasName="STREET_ADDRESS"/>
+  <ViewAttribute
+    Name="PostalCode"
+    PrecisionRule="true"
+    EntityAttrName="PostalCode"
+    EntityUsage="HrLocations"
+    AliasName="POSTAL_CODE"/>
+  <ViewAttribute
+    Name="City"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="City"
+    EntityUsage="HrLocations"
+    AliasName="CITY"/>
+  <ViewAttribute
+    Name="StateProvince"
+    PrecisionRule="true"
+    EntityAttrName="StateProvince"
+    EntityUsage="HrLocations"
+    AliasName="STATE_PROVINCE"/>
+  <ViewAttribute
+    Name="CountryId"
+    PrecisionRule="true"
+    EntityAttrName="CountryId"
+    EntityUsage="HrLocations"
+    AliasName="COUNTRY_ID"/>
+  <ViewLinkAccessor
+    Name="HrDepartmentsView"
+    ViewLink="model.views.links.DeptLocFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>
