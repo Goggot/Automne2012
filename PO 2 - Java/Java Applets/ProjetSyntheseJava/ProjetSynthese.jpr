@@ -138,6 +138,7 @@
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">
          <list n="pattern-filters">
+            <string v="-projetSynthese/TESTP1.java"/>
             <string v="+projetSynthese/"/>
          </list>
          <list n="url-path">
@@ -169,7 +170,7 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Junit-4.5.jar"/>
+            <value n="id" v="Junit-4.10.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
