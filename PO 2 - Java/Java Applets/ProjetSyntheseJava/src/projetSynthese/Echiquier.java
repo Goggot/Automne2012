@@ -46,7 +46,7 @@ public class Echiquier
     location[7][4].setPiece(new Roi("Roi", "blanc"));
   }
   
-    public boolean cheminPossible(Position depart, Position arrive)    // DÉFINITION DES DÉPLACEMENTS POSSIBLE EN TOUT, PAS PAR PIÈCE
+    public boolean cheminPossible(Position depart, Position arrive)    // Dï¿½FINITION DES Dï¿½PLACEMENTS POSSIBLE EN TOUT, PAS PAR PIï¿½CE
     {
         boolean valid = true;
         
@@ -58,70 +58,70 @@ public class Echiquier
         if (arrive.getColonne() == 0)
          arriveColonne = depart.getColonne();
         
-        if (depart.getLigne() - arriveLigne > 0 && depart.getColonne() == arrive.getColonne())                      // Vérification du chemin vers le haut sur les lignes
+        if (depart.getLigne() - arriveLigne > 0 && depart.getColonne() == arrive.getColonne())                      // Vï¿½rification du chemin vers le haut sur les lignes
         {
             for (int i=depart.getLigne()-1; i>depart.getLigne(); i--)
                 if (location[i][arrive.getColonne()].estOccupe())
                     valid = false;
         }
         
-        if (depart.getLigne() - arriveLigne < 0 && depart.getColonne() == arrive.getColonne())                      // Vérification du chemin vers le bas sur les lignes
+        if (depart.getLigne() - arriveLigne < 0 && depart.getColonne() == arrive.getColonne())                      // Vï¿½rification du chemin vers le bas sur les lignes
         {
             for (int i=depart.getLigne()+1; i<depart.getLigne(); i++)
                 if (location[i][arrive.getColonne()].estOccupe())
                     valid = false;
         }
         
-        if (depart.getColonne() - arriveColonne > 0 && depart.getLigne() == arrive.getLigne())                  // Vérification du chemin vers le haut sur les colonnes
+        if (depart.getColonne() - arriveColonne > 0 && depart.getLigne() == arrive.getLigne())                  // Vï¿½rification du chemin vers le haut sur les colonnes
         {
             for (int i=depart.getColonne()-1; i>arrive.getColonne(); i--)
                 if (location[arrive.getLigne()][i].estOccupe())
                     valid = false;
         }
         
-        if (depart.getColonne() - arriveColonne < 0 && depart.getLigne() == arrive.getLigne())                  // Vérification du chemin vers le bas sur les colonnes
+        if (depart.getColonne() - arriveColonne < 0 && depart.getLigne() == arrive.getLigne())                  // Vï¿½rification du chemin vers le bas sur les colonnes
         {
             for (int i=depart.getColonne()+1; i<arrive.getColonne(); i++)
                 if (location[depart.getLigne()][i].estOccupe())
                     valid = false;
         }
         
-        if (depart.getColonne() - arrive.getColonne() > 0 && depart.getLigne() != arrive.getLigne())                  // Vérification de la diagonale gauche
+        if (depart.getColonne() - arrive.getColonne() > 0 && depart.getLigne() != arrive.getLigne())                  // Vï¿½rification de la diagonale gauche
         {
-            if (depart.getLigne() - arriveLigne > 0)                      // Vérification du chemin vers le haut
+            if (depart.getLigne() - arriveLigne > 0)                      // Vï¿½rification du chemin vers le haut
             {
                 int ligne = depart.getLigne();
                 for (int i=depart.getColonne()-1; i>arrive.getColonne(); i--)
                     if (location[ligne--][i].estOccupe())
-                        if (location[ligne--][i].getPiece().getCouleur()== location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
+                        if (location[ligne--][i].getPiece().getCouleur() == location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
                             valid = false;
             }
-            else if (depart.getLigne() - arriveLigne < 0)                 // Vérification du chemin vers le bas
+            else if (depart.getLigne() - arriveLigne < 0)                 // Vï¿½rification du chemin vers le bas
             {
                 int ligne = depart.getLigne();
                 for (int i=depart.getColonne()+1; i<arrive.getColonne(); i++)
                     if (location[ligne++][i].estOccupe())
-                        if (location[ligne++][i].getPiece().getCouleur()== location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
+                        if (location[ligne++][i].getPiece().getCouleur() == location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
                             valid = false;
             }
         }
         
-        if (depart.getColonne() - arrive.getColonne() < 0 && depart.getLigne() != arrive.getLigne())                  // Vérification de la diagonale droite
+        if (depart.getColonne() - arrive.getColonne() < 0 && depart.getLigne() != arrive.getLigne())                  // Vï¿½rification de la diagonale droite
         {
-            if (depart.getLigne() - arriveLigne > 0)                      // Vérification du chemin vers le haut
+            if (depart.getLigne() - arriveLigne > 0)                      // Vï¿½rification du chemin vers le haut
             {
                 int ligne = depart.getLigne();
                 for (int i=depart.getColonne()-1; i>arrive.getColonne(); i--)
                     if (location[ligne--][i].estOccupe())
-                        if (location[ligne--][i].getPiece().getCouleur()== location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
+                        if (location[ligne--][i].getPiece().getCouleur() == location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
                             valid = false;
             }
-            else if (depart.getLigne() - arriveLigne < 0)                 // Vérification du chemin vers le bas
+            else if (depart.getLigne() - arriveLigne < 0)                 // Vï¿½rification du chemin vers le bas
             {
                 int ligne = depart.getLigne();
                 for (int i=depart.getColonne()+1; i<arrive.getColonne(); i++)
                     if (location[ligne++][i].estOccupe())
-                        if (location[ligne++][i].getPiece().getCouleur()== location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
+                        if (location[ligne++][i].getPiece().getCouleur() == location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur())
                             valid = false;
             }
         }
@@ -137,9 +137,9 @@ public class Echiquier
           return false;
       
         else {
-          if (location[arrive.getLigne()][arrive.getColonne()].estOccupe())       // Si la case d'arrivée est occupé
+          if (location[arrive.getLigne()][arrive.getColonne()].estOccupe())       // Si la case d'arrivï¿½e est occupï¿½
             if (location[depart.getLigne()][depart.getColonne()].getPiece().getCouleur() != 
-                  location[arrive.getLigne()][arrive.getColonne()].getPiece().getCouleur()) // Si la piece présente sur la case d'arrivée est de couleur différente
+                  location[arrive.getLigne()][arrive.getColonne()].getPiece().getCouleur()) // Si la piece prï¿½sente sur la case d'arrivï¿½e est de couleur diffï¿½rente
                 return true;
             else
                 return false;
