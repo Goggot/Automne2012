@@ -24,7 +24,8 @@ public class echiquierGraph
   Echiquier echiquier = new Echiquier();
   Position depart, arrivee;
   Color couleurDepart, couleurArrivee;
-
+  Piece laPiece;
+  
   private JPanel panelControl = new JPanel();
   private JButton boutonDebuter = new JButton();
   private JPanel panelPieceBlanche = new JPanel();
@@ -209,6 +210,7 @@ public class echiquierGraph
               {
                 depart = new Position(i, j);
                 couleurDepart = tabLabel[i][j].getBackground();
+                laPiece = echiquier.getCase(i,j).getPiece();
               }
               else
               {
@@ -217,15 +219,13 @@ public class echiquierGraph
                 couleurArrivee = tabLabel[i][j].getBackground();
               }
               tabLabel[i][j].setBackground(Color.RED);
-              
               if (valid)
               {
-                boolean cheminPossible = echiquier.cheminPossible(depart, arrivee);
-                boolean deplacementValid = true;
-                if (deplacementValid && cheminPossible)
+                if (echiquier.cheminPossible(depart, arrivee) && laPiece.estValide(depart, arrivee))
                 {
                   tabLabel[i][j].setIcon(tabLabel[depart.getLigne()][depart.getColonne()].getIcon());
                   tabLabel[depart.getLigne()][depart.getColonne()].setIcon(null);
+                  //echiquier.getCase(i, j).setPiece(laPiece);
                 }
                 tabLabel[depart.getLigne()][depart.getColonne()].setBackground(couleurDepart);
                 tabLabel[i][j].setBackground(couleurArrivee);
