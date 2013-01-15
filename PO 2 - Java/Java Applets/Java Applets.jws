@@ -22,6 +22,7 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/MobileResourcesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="Annexe8C/Annexe8C.jpr"/></hash>
       <hash><url n="URL" path="Applet6/Applet6.jpr"/></hash>
       <hash><url n="URL" path="Client/Client.jpr"/></hash>
       <hash><url n="URL" path="Examen1Num6/Examen1Num6.jpr"/></hash>
