@@ -190,10 +190,8 @@ public class echiquierGraph
         {
           tabLabel[1][i].setIcon(PN);
           tabLabel[6][i].setIcon(PB);
-          echiquier.getCase(1,
-                            i).setPiece(new Pion("p" + (i + 1), "noir"));
-          echiquier.getCase(7,
-                            i).setPiece(new Pion("p" + (i + 1), "blanc"));
+          echiquier.getCase(1,i).setPiece(new Pion("p" + (i + 1), "noir"));
+          echiquier.getCase(7,i).setPiece(new Pion("p" + (i + 1), "blanc"));
         }
 
         echiquier.debuter();
