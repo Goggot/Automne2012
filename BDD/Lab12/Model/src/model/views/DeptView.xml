@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DeptView"
+  Version="11.1.2.60.81"
+  SelectList="Dept.NODEPT, 
+       Dept.NOMD, 
+       Dept.VILLE"
+  FromList="DEPT Dept"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="Dept"
+    Entity="model.entities.Dept"/>
+  <ViewAttribute
+    Name="Nodept"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Nodept"
+    EntityUsage="Dept"
+    AliasName="NODEPT"/>
+  <ViewAttribute
+    Name="Nomd"
+    PrecisionRule="true"
+    EntityAttrName="Nomd"
+    EntityUsage="Dept"
+    AliasName="NOMD"/>
+  <ViewAttribute
+    Name="Ville"
+    PrecisionRule="true"
+    EntityAttrName="Ville"
+    EntityUsage="Dept"
+    AliasName="VILLE"/>
+  <ViewLinkAccessor
+    Name="EmpView"
+    ViewLink="model.views.links.SysC00275361Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

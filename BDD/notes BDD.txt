@@ -1,0 +1,3 @@
+Différences entre submit et commit :
+	- Submit : envoie tous les champs au serveur web, même ceux non-modifiés (et sans faire de commit)
+	- Commit : envoie et enregistre les infos modifiées (seulement) dans le serveur SQL

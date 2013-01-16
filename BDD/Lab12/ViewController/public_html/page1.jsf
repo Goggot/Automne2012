@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="page1.jsf" id="d1"
+               binding="#{backingBeanScope.backing_page1.d1}">
+    <af:form id="f1" binding="#{backingBeanScope.backing_page1.f1}">
+      <af:pageTemplate viewId="/templateDef1.jsf" value="#{bindings.ptb1}"
+                       id="pt1"
+                       binding="#{backingBeanScope.backing_page1.pt1}"/>
+    </af:form>
+  </af:document>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_page1-->
+</f:view>

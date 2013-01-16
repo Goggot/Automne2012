@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC00275360Link"
+  Version="11.1.2.60.81"
+  EntityAssociation="model.entities.assoc.SysC00275360Assoc">
+  <ViewLinkDefEnd
+    Name="NopatronEmpView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.views.EmpView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="NopatronEmpView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.EmpView.Noemp"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="EmpView"
+    Cardinality="-1"
+    Owner="model.views.EmpView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EmpView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.EmpView.Nopatron"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

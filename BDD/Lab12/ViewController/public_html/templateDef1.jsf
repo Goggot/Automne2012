@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                    var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component"
+                    xmlns:f="http://java.sun.com/jsf/core">
+  <af:xmlContent>
+    <afc:component>
+      <afc:display-name>templateDef1</afc:display-name>
+      <facet>
+        <facet-name>
+          main
+        </facet-name>
+      </facet>
+    </afc:component>
+  </af:xmlContent>
+  <af:panelSplitter orientation="vertical" splitterPosition="176"
+                    id="pt_ps1">
+    <f:facet name="first">
+      <af:panelGroupLayout layout="scroll" id="pt_pgl1">
+        <af:facetRef facetName="main"/>
+        <af:image source="#{resource['images:Logo_CIE.jpg']}" id="pt_i1"/>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelSplitter orientation="vertical" positionedFromEnd="true"
+                        splitterPosition="50" id="pt_ps2">
+        <f:facet name="first">
+          <af:panelFormLayout id="pt_pfl1">
+            <af:inputText value="#{bindings.Noemp.inputValue}"
+                          label="#{bindings.Noemp.hints.label}"
+                          required="#{bindings.Noemp.hints.mandatory}"
+                          columns="#{bindings.Noemp.hints.displayWidth}"
+                          maximumLength="#{bindings.Noemp.hints.precision}"
+                          shortDesc="#{bindings.Noemp.hints.tooltip}"
+                          id="pt_it1">
+              <f:validator binding="#{bindings.Noemp.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.Noemp.format}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.Poste.inputValue}"
+                          label="#{bindings.Poste.hints.label}"
+                          required="#{bindings.Poste.hints.mandatory}"
+                          columns="#{bindings.Poste.hints.displayWidth}"
+                          maximumLength="#{bindings.Poste.hints.precision}"
+                          shortDesc="#{bindings.Poste.hints.tooltip}"
+                          id="pt_it3">
+              <f:validator binding="#{bindings.Poste.validator}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.Nopatron.inputValue}"
+                          label="#{bindings.Nopatron.hints.label}"
+                          required="#{bindings.Nopatron.hints.mandatory}"
+                          columns="#{bindings.Nopatron.hints.displayWidth}"
+                          maximumLength="#{bindings.Nopatron.hints.precision}"
+                          shortDesc="#{bindings.Nopatron.hints.tooltip}"
+                          id="pt_it4">
+              <f:validator binding="#{bindings.Nopatron.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.Nopatron.format}"/>
+            </af:inputText>
+            <af:inputDate value="#{bindings.Datembauche.inputValue}"
+                          label="#{bindings.Datembauche.hints.label}"
+                          required="#{bindings.Datembauche.hints.mandatory}"
+                          columns="#{bindings.Datembauche.hints.displayWidth}"
+                          shortDesc="#{bindings.Datembauche.hints.tooltip}"
+                          id="pt_id1">
+              <f:validator binding="#{bindings.Datembauche.validator}"/>
+              <af:convertDateTime pattern="#{bindings.Datembauche.format}"/>
+            </af:inputDate>
+            <af:inputText value="#{bindings.Sal.inputValue}"
+                          label="#{bindings.Sal.hints.label}"
+                          required="#{bindings.Sal.hints.mandatory}"
+                          columns="#{bindings.Sal.hints.displayWidth}"
+                          maximumLength="#{bindings.Sal.hints.precision}"
+                          shortDesc="#{bindings.Sal.hints.tooltip}"
+                          id="pt_it5">
+              <f:validator binding="#{bindings.Sal.validator}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.Comm.inputValue}"
+                          label="#{bindings.Comm.hints.label}"
+                          required="#{bindings.Comm.hints.mandatory}"
+                          columns="#{bindings.Comm.hints.displayWidth}"
+                          maximumLength="#{bindings.Comm.hints.precision}"
+                          shortDesc="#{bindings.Comm.hints.tooltip}"
+                          id="pt_it6">
+              <f:validator binding="#{bindings.Comm.validator}"/>
+            </af:inputText>
+            <af:inputText value="#{bindings.Nodept.inputValue}"
+                          label="#{bindings.Nodept.hints.label}"
+                          required="#{bindings.Nodept.hints.mandatory}"
+                          columns="#{bindings.Nodept.hints.displayWidth}"
+                          maximumLength="#{bindings.Nodept.hints.precision}"
+                          shortDesc="#{bindings.Nodept.hints.tooltip}"
+                          id="pt_it7">
+              <f:validator binding="#{bindings.Nodept.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.Nodept.format}"/>
+            </af:inputText>
+            <f:facet name="footer">
+              <af:group id="pt_g1">
+                <af:panelGroupLayout layout="vertical" id="pt_pgl2"
+                                     inlineStyle="width:334px; height:31px;">
+                  <af:panelGroupLayout layout="horizontal" id="pt_pgl3">
+                    <f:facet name="separator">
+                      <af:spacer width="10" height="1" id="pt_s1"/>
+                    </f:facet>
+                    <af:commandButton actionListener="#{bindings.First.execute}"
+                                      text="First"
+                                      disabled="#{!bindings.First.enabled}"
+                                      partialSubmit="true" id="pt_cb1"/>
+                    <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                      text="Previous"
+                                      disabled="#{!bindings.Previous.enabled}"
+                                      partialSubmit="true" id="pt_cb2"/>
+                    <af:commandButton actionListener="#{bindings.Next.execute}"
+                                      text="Next"
+                                      disabled="#{!bindings.Next.enabled}"
+                                      partialSubmit="true" id="pt_cb3"/>
+                    <af:commandButton actionListener="#{bindings.Last.execute}"
+                                      text="Last"
+                                      disabled="#{!bindings.Last.enabled}"
+                                      partialSubmit="true" id="pt_cb4"/>
+                  </af:panelGroupLayout>
+                  <af:commandButton text="Submit" id="pt_cb5"/>
+                </af:panelGroupLayout>
+              </af:group>
+            </f:facet>
+          </af:panelFormLayout>
+          <!-- id="af_one_column_header_and_footer_stretched_with_splitter"   -->
+        </f:facet>
+        <f:facet name="second"/>
+      </af:panelSplitter>
+    </f:facet>
+  </af:panelSplitter>
+</af:pageTemplateDef>
