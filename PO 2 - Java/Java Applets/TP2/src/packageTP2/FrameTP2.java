@@ -24,5 +24,6 @@ public class FrameTP2
   {
     this.getContentPane().setLayout( null );
     this.setSize( new Dimension(400, 300) );
-  }
+        this.setTitle("Parachutisme FinHeureuse");
+    }
 }
