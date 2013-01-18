@@ -1,19 +1,19 @@
 package projetSynthese;
 
 /** 
- * classe abstraite Piece servant de point de départ pour tous les types de pièces d'un jeu d'échecs
- * @author Éric Labonté
+ * classe abstraite Piece servant de point de dï¿½part pour tous les types de piï¿½ces d'un jeu d'ï¿½checs
+ * @author ï¿½ric Labontï¿½
  * @version 3
 */
 
 public abstract class Piece {
 
 /**
- * nom de la pièce selon les conventions
+ * nom de la piï¿½ce selon les conventions
  */
 private String nom;
 /**
- * couleur de la pièce
+ * couleur de la piï¿½ce
  */
 private String couleur;
 
@@ -43,15 +43,15 @@ public String getCouleur ()
 
 public void setCouleur ( String couleur )
   {
-  if (( couleur == "noir" ) || ( couleur == "blanc" ))
+  if (( couleur == "NOIR" ) || ( couleur == "BLANC" ))
     this.couleur = couleur;
   }
  
 /** 
-*méthode permettant de calculer la norme mathématique entre deux Positions
-* @param depart Position de départ
-* @param arrivee Position d'arrivée de la Pièce
-* @return la somme des carrés des distances
+*mï¿½thode permettant de calculer la norme mathï¿½matique entre deux Positions
+* @param depart Position de dï¿½part
+* @param arrivee Position d'arrivï¿½e de la Piï¿½ce
+* @return la somme des carrï¿½s des distances
 * 
 */
 public double norme (Position depart, Position arrivee)
@@ -59,8 +59,7 @@ public double norme (Position depart, Position arrivee)
   return Math.pow((depart.getLigne()-arrivee.getLigne()), 2)+ Math.pow((depart.getColonne() - arrivee.getColonne()),2);
   }
 
-/* méthode abstraite à implémenter dans chacune des sous - classes */
+/* methode abstraite a implementer dans chacune des sous - classes */
 
-public abstract boolean estValide (Position depart, Position arrivee);
-
+public abstract boolean estValide (Position depart,Position arrivee);
 }
