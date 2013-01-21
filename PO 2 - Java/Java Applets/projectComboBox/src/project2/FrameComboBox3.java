@@ -60,7 +60,7 @@ public class FrameComboBox3
     @Override
     public void actionPerformed(ActionEvent e)
     {
-      champTexte.setFont(tab.get())
+      champTexte.setFont(tab.get());
     }
   }
 

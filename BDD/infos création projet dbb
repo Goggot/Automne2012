@@ -1,0 +1,9 @@
+Build Business Services
+page 1 : model.entities
+page 2 : model.views -> ajouter toutes les vues
+page 3 : model.views en lecture seul (ne pas utiliser sauf si necessaire)
+etc...
+
+Création diagramme : Database Diagram, dans le model
+
+

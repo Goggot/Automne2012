@@ -53,7 +53,7 @@ public class FrameDragAndDrop extends JFrame {
          
             ((JButton)e.getSource()).addMouseMotionListener( ec );
                 
-            posInitialeParRapportaEcran = e.getLocationOnScreen();   // position de l'événement par rapport à l'écran : attention e.getLocation() emplacement de l'événement par raport à sa source
+            posInitialeParRapportaEcran = e.getLocationOnScreen();   // position de l'ï¿½vï¿½nement par rapport ï¿½ l'ï¿½cran : attention e.getLocation() emplacement de l'ï¿½vï¿½nement par raport ï¿½ sa source
               
             posInitialeBoutonParRapportAuFrame = ((JButton)e.getSource()).getLocation();  // position du bouton par rapport au Frame 
            
@@ -62,7 +62,7 @@ public class FrameDragAndDrop extends JFrame {
 
         public void mouseReleased(MouseEvent e) {
             ((JButton)e.getSource()).removeMouseMotionListener( ec ); // enlever le mouseDragged
-            ((JButton)e.getSource()).setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // remettre le curseur régulier  
+            ((JButton)e.getSource()).setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // remettre le curseur rï¿½gulier  
         }
 
         public void mouseEntered(MouseEvent e) {
@@ -73,17 +73,14 @@ public class FrameDragAndDrop extends JFrame {
 
         public void mouseDragged(MouseEvent e) {
             
-            Point dragged = e.getLocationOnScreen(); // événement par rapport à l'écran 
+            Point dragged = e.getLocationOnScreen(); // ï¿½vï¿½nement par rapport ï¿½ l'ï¿½cran 
            
-            int dragX = (int)(dragged.getX()-posInitialeParRapportaEcran.getX()); // on doit passer par la position par rapport à l'écran ; pas de position de l'événement par rapport à la fenêtre car la source est le bouton
+            int dragX = (int)(dragged.getX()-posInitialeParRapportaEcran.getX()); // on doit passer par la position par rapport ï¿½ l'ï¿½cran ; pas de position de l'ï¿½vï¿½nement par rapport ï¿½ la fenï¿½tre car la source est le bouton
             int dragY = (int)(dragged.getY()-posInitialeParRapportaEcran.getY());
             
-            System.out.println ( e.getX() + "  "+ e.getY()); // la preuve : position de l'événement par rapport à la source  
+            System.out.println ( e.getX() + "  "+ e.getY()); // la preuve : position de l'ï¿½vï¿½nement par rapport ï¿½ la source  
             
             ((JButton)e.getSource()).setLocation(posInitialeBoutonParRapportAuFrame.x + dragX, posInitialeBoutonParRapportAuFrame.y + dragY);
-          
-           
-
         }
 
         public void mouseMoved(MouseEvent e) {

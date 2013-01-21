@@ -1,0 +1,9 @@
+Traitement des exceptions
+
+	- En procedural : plusieurs if(), alourdit le code
+	- En Orienté Objet : création d'objets Exception (try{} catch{})
+
+	Avantages : 
+		-séparations entre le code normal du programme et les situations problematiques
+		-richesse des objets Exception : peut contenir plusieurs infos sur le problème
+		-hierarchie dans les objets Exception : peut choisir de traiter une exception relative à un fichier texte ou de façon 				générale
