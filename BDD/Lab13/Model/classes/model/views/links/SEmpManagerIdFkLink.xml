@@ -7,14 +7,13 @@
   Version="11.1.2.60.81"
   EntityAssociation="model.entities.assoc.SEmpManagerIdFkAssoc">
   <ViewLinkDefEnd
-    Name="SDeptView1"
+    Name="ManagerIdSEmpView"
     Cardinality="1"
     Source="true"
     Owner="model.views.SEmpView">
     <DesignTime>
-      <Attr Name="_finderName" Value="SDeptView1"/>
+      <Attr Name="_finderName" Value="ManagerIdSEmpView"/>
       <Attr Name="_isUpdateable" Value="true"/>
-      <Attr Name="_accessor" Value="true"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.views.SEmpView.Id"/>

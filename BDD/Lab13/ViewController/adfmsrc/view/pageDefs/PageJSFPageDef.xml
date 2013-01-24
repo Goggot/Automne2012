@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.2.60.81" id="PageJSFPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SEmpView3" RangeSize="25"
+              DataControl="AppModuleDataControl" id="SEmpView3Iterator"/>
+    <iterator Binds="SEmpView1" RangeSize="25"
+              DataControl="AppModuleDataControl" id="SEmpView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SEmpView3Iterator" id="SEmpView3">
+      <nodeDefinition DefName="model.views.SEmpView" Name="SEmpView30">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Title"/>
+          <Item Value="Nom"/>
+          <Item Value="DeptId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="NvSal"/>
+          <Item Value="SommeCommande"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="SEmpView3Iterator" id="TotalDept">
+      <AttrNames>
+        <Item Value="TotalDept"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SEmpView3Iterator" id="TotalSal">
+      <AttrNames>
+        <Item Value="TotalSal"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true"
+            Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="SEmpView1Iterator" id="Execute"
+            RequiresUpdateModel="true" Action="iteratorExecute"/>
+  </bindings>
+</pageDefinition>

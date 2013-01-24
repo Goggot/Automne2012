@@ -118,7 +118,9 @@
     <DesignTime>
       <Attr Name="_DBObjectName" Value="S_ORD_ID_PK"/>
     </DesignTime>
-    <AttrArray Name="Attributes"/>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SOrd.Id"/>
+    </AttrArray>
   </Key>
   <Key
     Name="SOrdOrderFilledCk">
@@ -146,7 +148,9 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="S_ORD_CUSTOMER_ID_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes"/>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SOrd.CustomerId"/>
+    </AttrArray>
   </Key>
   <Key
     Name="SOrdSalesRepIdFk">
@@ -155,6 +159,8 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="S_ORD_SALES_REP_ID_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes"/>
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.SOrd.SalesRepId"/>
+    </AttrArray>
   </Key>
 </Entity>

@@ -18,16 +18,28 @@
   <ViewUsage
     Name="SOrdView2"
     ViewObjectName="model.views.SOrdView"/>
-  <ViewLinkUsage
-    Name="SEmpManagerIdFkLink1"
-    ViewLinkObjectName="model.views.links.SEmpManagerIdFkLink"
-    SrcViewUsageName="model.AppModule.SEmpView1"
-    DstViewUsageName="model.AppModule.SEmpView2"
-    Reversed="false"/>
+  <ViewUsage
+    Name="SEmpView3"
+    ViewObjectName="model.views.SEmpView"/>
+  <ViewUsage
+    Name="SOrdView3"
+    ViewObjectName="model.views.SOrdView"/>
+  <ViewUsage
+    Name="SDeptView1"
+    ViewObjectName="model.views.SDeptView"/>
+  <ViewUsage
+    Name="SEmpView4"
+    ViewObjectName="model.views.SEmpView"/>
   <ViewLinkUsage
     Name="SOrdSalesRepIdFkLink1"
     ViewLinkObjectName="model.views.links.SOrdSalesRepIdFkLink"
     SrcViewUsageName="model.AppModule.SEmpView1"
     DstViewUsageName="model.AppModule.SOrdView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SEmpDeptIdFkLink"
+    ViewLinkObjectName="model.views.links.SEmpDeptIdFkLink"
+    SrcViewUsageName="model.AppModule.SDeptView1"
+    DstViewUsageName="model.AppModule.SEmpView4"
     Reversed="false"/>
 </AppModule>

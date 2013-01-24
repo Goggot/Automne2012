@@ -26,6 +26,10 @@
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
+  <ViewAccessor
+    Name="SEmpView1"
+    ViewObjectName="model.views.SEmpView"
+    RowLevelBinds="true"/>
   <EntityUsage
     Name="SEmp"
     Entity="model.entities.SEmp"/>
@@ -35,23 +39,20 @@
     PrecisionRule="true"
     EntityAttrName="Id"
     EntityUsage="SEmp"
-    AliasName="ID"
-    IsUpdateable="false"/>
+    AliasName="ID"/>
   <ViewAttribute
     Name="LastName"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="LastName"
     EntityUsage="SEmp"
-    AliasName="LAST_NAME"
-    IsUpdateable="false"/>
+    AliasName="LAST_NAME"/>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
     EntityAttrName="FirstName"
     EntityUsage="SEmp"
-    AliasName="FIRST_NAME"
-    IsUpdateable="false"/>
+    AliasName="FIRST_NAME"/>
   <ViewAttribute
     Name="Userid"
     IsUnique="true"
@@ -82,15 +83,13 @@
     PrecisionRule="true"
     EntityAttrName="Title"
     EntityUsage="SEmp"
-    AliasName="TITLE"
-    IsUpdateable="false"/>
+    AliasName="TITLE"/>
   <ViewAttribute
     Name="DeptId"
     PrecisionRule="true"
     EntityAttrName="DeptId"
     EntityUsage="SEmp"
-    AliasName="DEPT_ID"
-    IsUpdateable="false"/>
+    AliasName="DEPT_ID"/>
   <ViewAttribute
     Name="Salary"
     PrecisionRule="true"
@@ -113,7 +112,7 @@
     AliasName="VIEW_ATTR"
     SQLType="NUMERIC">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA[Salary*1.10]]></TransientExpression>
+    <TransientExpression><![CDATA[Salary*=1.10]]></TransientExpression>
     <Dependencies>
       <Item
         Value="Salary"/>
@@ -129,7 +128,7 @@
     AliasName="VIEW_ATTR"
     SQLType="NUMERIC">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA[SDeptView.sum("Total")]]></TransientExpression>
+    <TransientExpression><![CDATA[SOrdView.sum("Total")]]></TransientExpression>
   </ViewAttribute>
   <ViewAttribute
     Name="Nom"
@@ -142,7 +141,7 @@
     AliasName="VIEW_ATTR"
     SQLType="VARCHAR">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA[FirstName+" "+LastName]]></TransientExpression>
+    <TransientExpression><![CDATA[LastName+", "+FirstName]]></TransientExpression>
     <Dependencies>
       <Item
         Value="FirstName"/>
@@ -151,7 +150,7 @@
     </Dependencies>
   </ViewAttribute>
   <ViewAttribute
-    Name="TotalDesSal"
+    Name="TotalSal"
     IsSelected="false"
     IsPersistent="false"
     PrecisionRule="true"
@@ -160,7 +159,7 @@
     AliasName="VIEW_ATTR"
     SQLType="NUMERIC">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA[sum("Salary")]]></TransientExpression>
+    <TransientExpression><![CDATA[SEmpView1.sum("Salary")]]></TransientExpression>
     <Dependencies>
       <Item
         Value="Salary"/>
@@ -176,26 +175,17 @@
     AliasName="VIEW_ATTR"
     SQLType="NUMERIC">
     <RecalcCondition><![CDATA[true]]></RecalcCondition>
-    <TransientExpression><![CDATA[sum("Salary")]]></TransientExpression>
-    <Dependencies>
-      <Item
-        Value="Salary"/>
-    </Dependencies>
+    <TransientExpression><![CDATA[SDeptView.SEmpView.sum("Salary")]]></TransientExpression>
   </ViewAttribute>
   <ViewLinkAccessor
-    Name="SEmpView"
-    ViewLink="model.views.links.SEmpManagerIdFkLink"
+    Name="SOrdView"
+    ViewLink="model.views.links.SOrdSalesRepIdFkLink"
     Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="SDeptView1"
-    ViewLink="model.views.links.SEmpManagerIdFkLink"
-    Type="oracle.jbo.Row"
-    Reversed="true"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="SDeptView"
-    ViewLink="model.views.links.SOrdSalesRepIdFkLink"
-    Type="oracle.jbo.RowIterator"
+    ViewLink="model.views.links.SEmpDeptIdFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

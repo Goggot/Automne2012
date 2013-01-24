@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_demoChampReference.d1}">
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_demoChampReference.f1}">
+        <af:commandButton
+                          binding="#{backingBeanScope.backing_demoChampReference.cb1}"
+                          id="cb1" text="rendre visible"
+                          action="#{backingBeanScope.backing_demoChampReference.cb1_action}"
+                          inlineStyle="font-size:large;"/>
+        <af:outputText value="BONJOUR "
+                       binding="#{backingBeanScope.backing_demoChampReference.ot1}"
+                       id="ot1" inlineStyle="font-size:x-large;"
+                       visible="false"/>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_demoChampReference-->
+</jsp:root>

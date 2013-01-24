@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-   <Reference name="Connection12" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="Connection12" xmlns="">
+   <Reference name="Connection1" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="Connection1" xmlns="">
       <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
       <RefAddresses>
          <StringRefAddr addrType="sid">
@@ -16,7 +16,7 @@
             <Contents>ellis</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="user">
-            <Contents>H12PALANER</Contents>
+            <Contents>h12palaner</Contents>
          </StringRefAddr>
          <SecureRefAddr addrType="password"/>
          <StringRefAddr addrType="oraDriverType">

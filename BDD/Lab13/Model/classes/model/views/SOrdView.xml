@@ -77,7 +77,7 @@
     EntityUsage="SOrd"
     AliasName="ORDER_FILLED"/>
   <ViewLinkAccessor
-    Name="SEmpView"
+    Name="SEmpView1"
     ViewLink="model.views.links.SOrdSalesRepIdFkLink"
     Type="oracle.jbo.Row"
     Reversed="true"

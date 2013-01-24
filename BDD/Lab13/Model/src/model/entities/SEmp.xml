@@ -147,6 +147,13 @@
     AssociationOtherEnd="model.entities.assoc.SOrdSalesRepIdFkAssoc.SEmp"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="SDept"
+    Association="model.entities.assoc.SEmpDeptIdFkAssoc"
+    AssociationEnd="model.entities.assoc.SEmpDeptIdFkAssoc.SDept"
+    AssociationOtherEnd="model.entities.assoc.SEmpDeptIdFkAssoc.SEmp"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="SEmpCommissionPctCk">
     <DesignTime>

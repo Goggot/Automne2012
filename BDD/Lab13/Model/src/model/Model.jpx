@@ -10,7 +10,7 @@
   <DesignTime>
     <Attr Name="_jprName" Value="../../Model.jpr"/>
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
-    <Attr Name="_NamedConnection" Value="Connection12"/>
+    <Attr Name="_NamedConnection" Value="Connection1"/>
     <Attr Name="_appModuleNames0" Value="model.AppModule"/>
   </DesignTime>
   <Containee

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+  <af:document title="untitled1.jsf" id="d1"
+               binding="#{backingBeanScope.Bean.d1}">
+    <af:messages id="m1" binding="#{backingBeanScope.Bean.m1}"/>
+    <af:form id="f1" binding="#{backingBeanScope.Bean.f1}">
+      <af:panelStretchLayout id="psl1"
+                             binding="#{backingBeanScope.Bean.psl1}">
+        <f:facet name="center">
+          <af:panelGroupLayout layout="scroll" id="pgl1"
+                               binding="#{backingBeanScope.Bean.pgl1}">
+            <af:panelCollection id="pc1"
+                                binding="#{backingBeanScope.Bean.pc1}"
+                                inlineStyle="width:1247px; height:307px;">
+              <f:facet name="menus"/>
+              <f:facet name="toolbar"/>
+              <f:facet name="statusbar"/>
+              <af:table value="#{bindings.SEmpView3.collectionModel}"
+                        var="row" rows="#{bindings.SEmpView3.rangeSize}"
+                        emptyText="#{bindings.SEmpView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.SEmpView3.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.SEmpView3.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.SEmpView3.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t2"
+                        binding="#{backingBeanScope.Bean.t2}"
+                        inlineStyle="height:384px;"
+                        partialTriggers=":::cb2">
+                <af:column sortProperty="#{bindings.SEmpView3.hints.Id.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.Id.label}"
+                           id="c1" width="118">
+                  <af:inputText value="#{row.bindings.Id.inputValue}"
+                                label="#{bindings.SEmpView3.hints.Id.label}"
+                                required="#{bindings.SEmpView3.hints.Id.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.Id.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.Id.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.Id.tooltip}"
+                                id="it1">
+                    <f:validator binding="#{row.bindings.Id.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.SEmpView3.hints.Id.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.Title.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.Title.label}"
+                           id="c2" width="230">
+                  <af:inputText value="#{row.bindings.Title.inputValue}"
+                                label="#{bindings.SEmpView3.hints.Title.label}"
+                                required="#{bindings.SEmpView3.hints.Title.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.Title.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.Title.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.Title.tooltip}"
+                                id="it2">
+                    <f:validator binding="#{row.bindings.Title.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.Nom.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.Nom.label}"
+                           id="c3" width="216">
+                  <af:inputText value="#{row.bindings.Nom.inputValue}"
+                                label="#{bindings.SEmpView3.hints.Nom.label}"
+                                required="#{bindings.SEmpView3.hints.Nom.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.Nom.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.Nom.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.Nom.tooltip}"
+                                id="it3">
+                    <f:validator binding="#{row.bindings.Nom.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.DeptId.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.DeptId.label}"
+                           id="c4" width="102">
+                  <af:inputText value="#{row.bindings.DeptId.inputValue}"
+                                label="#{bindings.SEmpView3.hints.DeptId.label}"
+                                required="#{bindings.SEmpView3.hints.DeptId.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.DeptId.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.DeptId.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.DeptId.tooltip}"
+                                id="it4">
+                    <f:validator binding="#{row.bindings.DeptId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.SEmpView3.hints.DeptId.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.Salary.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.Salary.label}"
+                           id="c5" width="141">
+                  <af:inputText value="#{row.bindings.Salary.inputValue}"
+                                label="#{bindings.SEmpView3.hints.Salary.label}"
+                                required="#{bindings.SEmpView3.hints.Salary.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.Salary.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.Salary.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.Salary.tooltip}"
+                                id="it5">
+                    <f:validator binding="#{row.bindings.Salary.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.NvSal.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.NvSal.label}"
+                           id="c7" width="204">
+                  <af:inputText value="#{row.bindings.NvSal.inputValue}"
+                                label="#{bindings.SEmpView3.hints.NvSal.label}"
+                                required="#{bindings.SEmpView3.hints.NvSal.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.NvSal.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.NvSal.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.NvSal.tooltip}"
+                                id="it7">
+                    <f:validator binding="#{row.bindings.NvSal.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.SEmpView3.hints.NvSal.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.SEmpView3.hints.SommeCommande.name}"
+                           sortable="false"
+                           headerText="#{bindings.SEmpView3.hints.SommeCommande.label}"
+                           id="c8" width="197">
+                  <af:inputText value="#{row.bindings.SommeCommande.inputValue}"
+                                label="#{bindings.SEmpView3.hints.SommeCommande.label}"
+                                required="#{bindings.SEmpView3.hints.SommeCommande.mandatory}"
+                                columns="#{bindings.SEmpView3.hints.SommeCommande.displayWidth}"
+                                maximumLength="#{bindings.SEmpView3.hints.SommeCommande.precision}"
+                                shortDesc="#{bindings.SEmpView3.hints.SommeCommande.tooltip}"
+                                id="it8">
+                    <f:validator binding="#{row.bindings.SommeCommande.validator}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
+            </af:panelCollection>
+            <af:panelGroupLayout id="pgl2"
+                                 binding="#{backingBeanScope.Bean.pgl2}"
+                                 inlineStyle="height:24px;">
+              <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                text="Sauvegarder"
+                                disabled="#{!bindings.Commit.enabled}"
+                                id="cb2"
+                                binding="#{backingBeanScope.Bean.cb2}"/>
+              <af:commandButton actionListener="#{bindings.Execute.execute}"
+                                text="Submit"
+                                disabled="#{!bindings.Execute.enabled}"
+                                id="cb1"
+                                binding="#{backingBeanScope.Bean.cb1}"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl4"
+                                 binding="#{backingBeanScope.Bean.pgl4}"
+                                 inlineStyle="height:25px;">
+              <af:outputText value="Total des salaires :" id="ot1"
+                             binding="#{backingBeanScope.Bean.ot1}"/>
+              <af:outputText value="#{bindings.TotalSal.inputValue}"
+                             id="ot4"
+                             binding="#{backingBeanScope.Bean.ot4}"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl3"
+                                 binding="#{backingBeanScope.Bean.pgl3}"
+                                 inlineStyle="height:30px;">
+              <af:outputText value="Total par departement :" id="ot2"
+                             binding="#{backingBeanScope.Bean.ot2}"/>
+              <af:outputText value="#{bindings.TotalDept.inputValue}"
+                             id="ot3"
+                             binding="#{backingBeanScope.Bean.ot3}"/>
+            </af:panelGroupLayout>
+          </af:panelGroupLayout>
+          <!-- id="af_one_column_stretched"   -->
+        </f:facet>
+      </af:panelStretchLayout>
+    </af:form>
+  </af:document>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:Bean-->
+</f:view>

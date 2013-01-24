@@ -7,12 +7,12 @@
   Version="11.1.2.60.81"
   EntityAssociation="model.entities.assoc.SOrdSalesRepIdFkAssoc">
   <ViewLinkDefEnd
-    Name="SEmpView"
+    Name="SEmpView1"
     Cardinality="1"
     Source="true"
     Owner="model.views.SEmpView">
     <DesignTime>
-      <Attr Name="_finderName" Value="SEmpView"/>
+      <Attr Name="_finderName" Value="SEmpView1"/>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_accessor" Value="true"/>
     </DesignTime>
@@ -21,11 +21,11 @@
     </AttrArray>
   </ViewLinkDefEnd>
   <ViewLinkDefEnd
-    Name="SDeptView"
+    Name="SOrdView"
     Cardinality="-1"
     Owner="model.views.SOrdView">
     <DesignTime>
-      <Attr Name="_finderName" Value="SDeptView"/>
+      <Attr Name="_finderName" Value="SOrdView"/>
       <Attr Name="_isUpdateable" Value="true"/>
     </DesignTime>
     <AttrArray Name="Attributes">
