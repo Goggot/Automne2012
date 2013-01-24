@@ -9,9 +9,15 @@ import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -21,8 +27,9 @@ public class FrameTP2
   extends JFrame
 {
     EnsembleClients tabClient = new EnsembleClients();
+    boolean valid = false;
     
-    private JLabel jLabel1 = new JLabel();
+    private JLabel numClient = new JLabel();
     private JTextField champNumClt = new JTextField();
     private JPanel panelInfos = new JPanel();
     private JLabel jLabel2 = new JLabel();
@@ -33,7 +40,13 @@ public class FrameTP2
     private JLabel champNom = new JLabel();
     private JLabel champNumCarte = new JLabel();
     private JLabel champCoord = new JLabel();
-    private JButton boutonValid = new JButton();
+    private JButton boutonRecherche = new JButton();
+    private JLabel jLabel6 = new JLabel();
+    private JLabel champPtsBonus = new JLabel();
+    private JButton boutonAccepter = new JButton();
+    private JMenuBar jMenuBar1 = new JMenuBar();
+    private JMenu jMenu1 = new JMenu();
+    private JMenuItem ajoutClt = new JMenuItem();
 
     public FrameTP2()
   {
@@ -51,16 +64,17 @@ public class FrameTP2
     throws Exception
   {
     this.getContentPane().setLayout( null );
-    this.setSize(new Dimension(449, 337));
+    this.setSize(new Dimension(536, 376));
         this.setTitle("Parachutisme FinHeureuse");
-        jLabel1.setText("Numero du client :");
-        jLabel1.setBounds(new Rectangle(20, 20, 160, 30));
-        jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel1.setFont(new Font("Dialog", 0, 14));
+        this.setJMenuBar(jMenuBar1);
+        numClient.setText("Numero du client :");
+        numClient.setBounds(new Rectangle(20, 20, 160, 30));
+        numClient.setHorizontalAlignment(SwingConstants.CENTER);
+        numClient.setFont(new Font("Dialog", 0, 14));
         champNumClt.setBounds(new Rectangle(195, 20, 225, 35));
         panelInfos.setBounds(new Rectangle(15, 70, 420, 235));
         panelInfos.setLayout(null);
-        panelInfos.setBounds(new Rectangle(15, 70, 415, 230));
+        panelInfos.setBounds(new Rectangle(15, 70, 500, 255));
         jLabel2.setText("Nom :");
         jLabel2.setBounds(new Rectangle(25, 30, 95, 25));
         jLabel2.setHorizontalAlignment(SwingConstants.LEFT);
@@ -74,18 +88,32 @@ public class FrameTP2
         jLabel5.setText("Coordonnees :");
         jLabel5.setBounds(new Rectangle(25, 135, 125, 20));
         jLabel5.setFont(new Font("Dialog", 0, 14));
-        champDate.setBounds(new Rectangle(225, 100, 170, 25));
+        jLabel6.setText("Points bonus :");
+        jLabel6.setBounds(new Rectangle(25, 170, 125, 20));
+        jLabel6.setFont(new Font("Dialog", 0, 14));
+        champPtsBonus.setFont(new Font("Dialog", 0, 14));
+        champPtsBonus.setBounds(new Rectangle(185, 170, 310, 25));
+        boutonAccepter.setText("Accepter");
+        boutonAccepter.setBounds(new Rectangle(270, 220, 125, 25));
+        boutonAccepter.setFont(new Font("Dialog", 1, 16));
+        boutonAccepter.setEnabled(false);
+        champDate.setBounds(new Rectangle(185, 100, 310, 25));
         champDate.setFont(new Font("Dialog", 0, 14));
         champNom.setFont(new Font("Dialog", 0, 14));
-        champNom.setBounds(new Rectangle(225, 30, 170, 25));
+        champNom.setBounds(new Rectangle(185, 30, 315, 25));
         champNumCarte.setFont(new Font("Dialog", 0, 14));
-        champNumCarte.setBounds(new Rectangle(225, 65, 170, 25));
+        champNumCarte.setBounds(new Rectangle(185, 65, 310, 25));
         champCoord.setFont(new Font("Dialog", 0, 14));
-        champCoord.setBounds(new Rectangle(225, 135, 170, 25));
-        boutonValid.setText("Valider");
-        boutonValid.setBounds(new Rectangle(125, 180, 175, 40));
-        boutonValid.setFont(new Font("Dialog", 1, 16));
-        panelInfos.add(boutonValid, null);
+        champCoord.setBounds(new Rectangle(185, 135, 310, 25));
+        boutonRecherche.setText("Recherche");
+        boutonRecherche.setBounds(new Rectangle(100, 220, 125, 25));
+        boutonRecherche.setFont(new Font("Dialog", 1, 16));
+        jMenu1.setText("Nouveau Client");
+        ajoutClt.setText("Ajouter");
+        panelInfos.add(boutonAccepter, null);
+        panelInfos.add(champPtsBonus, null);
+        panelInfos.add(jLabel6, null);
+        panelInfos.add(boutonRecherche, null);
         panelInfos.add(champCoord, null);
         panelInfos.add(champNumCarte, null);
         panelInfos.add(champNom, null);
@@ -94,30 +122,51 @@ public class FrameTP2
         panelInfos.add(jLabel4, null);
         panelInfos.add(jLabel3, null);
         panelInfos.add(jLabel2, null);
-        this.getContentPane().add(panelInfos, null);
+        jMenu1.add(ajoutClt);
+        jMenuBar1.add(jMenu1);
         this.getContentPane().add(panelInfos, null);
         this.getContentPane().add(champNumClt, null);
-        this.getContentPane().add(jLabel1, null);
+        this.getContentPane().add(numClient, null);
+
         
-        Ecouteur ec = new Ecouteur();
+        Ecouteur ecA = new Ecouteur();
+        ItemEcouteur ecI = new ItemEcouteur();
         
-        boutonValid.addActionListener(ec);
-    }
+        boutonRecherche.addActionListener(ecA);
+        boutonAccepter.addActionListener(ecA);
+        jMenu1.addActionListener(ecA);
+        ajoutClt.addItemListener(ecI);
+  }
 
     private class Ecouteur implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            try {
-                Client client = tabClient.getClient(champNumClt.getText());
-                champNom.setText(client.getNom());
-                champCoord.setText(client.getCoordonnees());
-                champDate.setText(String.valueOf(client.getDateNaissance()));
-                champNumCarte.setText(client.getNoCarte());
+            if (e.getSource()==boutonRecherche)
+                try {
+                    Client client = tabClient.getClient(champNumClt.getText());
+                    champNom.setText(client.getNom());
+                    champCoord.setText(client.getCoordonnees());
+                    champDate.setText(String.valueOf(client.getDateNaissance().getTime()));
+                    champNumCarte.setText(client.getNoCarte());
+                    champPtsBonus.setText(String.valueOf(client.getNbPointsBonis()));
+                    boutonAccepter.setEnabled(true);
+                    valid = true;
+                }
+                catch (NullPointerException npe) {
+                    JOptionPane.showMessageDialog(FrameTP2.this, "Numero inexistant");
+                    champNumClt.setText("");
+                }
+            if (e.getSource()==boutonAccepter && valid == true) {
+                FrameTP2.this.getContentPane().remove(panelInfos);
             }
-            catch (NullPointerException npe) {
-                JOptionPane.showMessageDialog(FrameTP2.this, "Numero inexistant");
-                champNumClt.setText("");
-            }
+        }
+    }
+
+    private static class ItemEcouteur implements ItemListener{
+
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            
         }
     }
 }

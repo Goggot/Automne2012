@@ -110,6 +110,11 @@ public class FenetreUsager extends JFrame
                 String rep = JOptionPane.showInputDialog("Entrez un montant valide");
                 champMontant.setText(rep);
             }
+            catch (NegatifException ne) {
+                
+                String montant = ne.getNomVariable();
+                JOptionPane.showMessageDialog(FenetreUsager.this, montant + " invalide...");
+            }
         }
 
         @Override

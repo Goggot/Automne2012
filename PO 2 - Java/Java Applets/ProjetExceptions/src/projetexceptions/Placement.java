@@ -9,11 +9,12 @@ private int nbMois;
 
 private static final double INTERET = 0.0037;
 
-  public Placement( double montant, int nbMois) 
+  public Placement( double montant, int nbMois) throws NegatifException
   {
- 
-  this.montant = montant;
-  this.nbMois = nbMois;
+    if (montant < 0)
+        throw new NegatifException("Montant");
+    this.montant = montant;
+    this.nbMois = nbMois;
   }
 
   public double calculerMontantFinal ()

@@ -273,11 +273,7 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Dom4j-1.6.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Poi-examples-3.9-20121203.jar"/>
+            <value n="id" v="Poi-ooxml-schemas-3.9-20121203.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -285,7 +281,11 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Poi-ooxml-schemas-3.9-20121203.jar"/>
+            <value n="id" v="Poi-3.9-20121203.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Dom4j-1.6.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -297,34 +297,7 @@
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url path="../../Notes/POI/dom4j-1.6.1.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Dom4j-1.6.1.jar"/>
-               <value n="id" v="Dom4j-1.6.1.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../Notes/POI/poi-examples-3.9-20121203.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Poi-examples-3.9-20121203.jar"/>
-               <value n="id" v="Poi-examples-3.9-20121203.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../Notes/POI/poi-ooxml-3.9-20121203.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Poi-ooxml-3.9-20121203.jar"/>
-               <value n="id" v="Poi-ooxml-3.9-20121203.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../Notes/POI/poi-ooxml-schemas-3.9-20121203.jar" jar-entry=""/>
+                  <url path="../../Notes/poi-3.9/poi-ooxml-schemas-3.9-20121203.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Poi-ooxml-schemas-3.9-20121203.jar"/>
@@ -333,7 +306,34 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../Notes/POI/xmlbeans-2.3.0.jar" jar-entry=""/>
+                  <url path="../../Notes/poi-3.9/poi-ooxml-3.9-20121203.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Poi-ooxml-3.9-20121203.jar"/>
+               <value n="id" v="Poi-ooxml-3.9-20121203.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../Notes/poi-3.9/poi-3.9-20121203.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Poi-3.9-20121203.jar"/>
+               <value n="id" v="Poi-3.9-20121203.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../Notes/poi-3.9/ooxml-lib/dom4j-1.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Dom4j-1.6.1.jar"/>
+               <value n="id" v="Dom4j-1.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../Notes/poi-3.9/ooxml-lib/xmlbeans-2.3.0.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Xmlbeans-2.3.0.jar"/>
@@ -348,11 +348,7 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Dom4j-1.6.1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Poi-examples-3.9-20121203.jar"/>
+            <value n="id" v="Poi-ooxml-schemas-3.9-20121203.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -360,7 +356,11 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Poi-ooxml-schemas-3.9-20121203.jar"/>
+            <value n="id" v="Poi-3.9-20121203.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Dom4j-1.6.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>

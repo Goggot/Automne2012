@@ -36,12 +36,12 @@ public class Frame1
     this.setJMenuBar(jMenuBar1);
     jMenu1.setText("Fichier");
     jMenuItem1.setText("Nouveau");
-    jMenuItem2.setText("Créer");
+    jMenuItem2.setText("Crï¿½er");
     jMenuItem3.setText("Supprimer");
     jMenu1.add(jMenuItem1);
     jMenu1.add(jMenuItem2);
     jMenu1.add(jMenuItem3);
     jMenuBar1.add(jMenu1);
-    jMenu1.set
+    
   }
 }

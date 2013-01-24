@@ -82,7 +82,7 @@ class Laser():
         self.range = 30
         self.attaquePossible = False # Un creep se trouve-t-il dans le rayon d'action ?
         self.cible = 0
-        self.distanceCourant = 0 # Pour comparer la distance entre sa cible et la sortie à celle d'une autre cible potentielle
+        self.distanceCourant = 0 # Pour comparer la distance entre sa cible à la sortie à celle d'une autre cible potentielle
         self.derniereAttaque = 0
         self.valeurVente = self.prixUpgrade * 0.75
 

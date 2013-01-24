@@ -13,12 +13,10 @@ public class Billet
     this.type = type;
     this.numeroCommandeAssociee = numeroCommandeAssociee;
 
-    if (type.equals("Régulier"))
+    if (type.equals("RÃ©gulier"))
       prix = 199.99;
-    else // personnes aînées
+    else // personnes agÃ©s
       prix = 179.99;
-
-
   }
 
 
