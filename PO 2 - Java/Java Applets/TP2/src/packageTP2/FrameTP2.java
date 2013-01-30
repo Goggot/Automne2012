@@ -29,6 +29,7 @@ public class FrameTP2
     EnsembleClients tabClient = new EnsembleClients();
     boolean valid = false;
     
+    newClient panelNouvClient = new newClient();
     private JLabel numClient = new JLabel();
     private JTextField champNumClt = new JTextField();
     private JPanel panelInfos = new JPanel();
@@ -64,7 +65,7 @@ public class FrameTP2
     throws Exception
   {
     this.getContentPane().setLayout( null );
-    this.setSize(new Dimension(536, 376));
+    this.setSize(new Dimension(536, 395));
         this.setTitle("Parachutisme FinHeureuse");
         this.setJMenuBar(jMenuBar1);
         numClient.setText("Numero du client :");
@@ -74,7 +75,7 @@ public class FrameTP2
         champNumClt.setBounds(new Rectangle(195, 20, 225, 35));
         panelInfos.setBounds(new Rectangle(15, 70, 420, 235));
         panelInfos.setLayout(null);
-        panelInfos.setBounds(new Rectangle(15, 70, 500, 255));
+        panelInfos.setBounds(new Rectangle(15, 70, 500, 260));
         jLabel2.setText("Nom :");
         jLabel2.setBounds(new Rectangle(25, 30, 95, 25));
         jLabel2.setHorizontalAlignment(SwingConstants.LEFT);
@@ -158,15 +159,19 @@ public class FrameTP2
                 }
             if (e.getSource()==boutonAccepter && valid == true) {
                 FrameTP2.this.getContentPane().remove(panelInfos);
+                champNumClt.setEnabled(false);
             }
+            
+            //if (e.getSource() == panelNouvClient)
         }
     }
 
-    private static class ItemEcouteur implements ItemListener{
+    private class ItemEcouteur implements ItemListener{
 
         @Override
         public void itemStateChanged(ItemEvent e) {
-            
+            FrameTP2.this.getContentPane().remove(panelInfos);
+            FrameTP2.this.getContentPane().add(panelNouvClient,null);
         }
     }
 }

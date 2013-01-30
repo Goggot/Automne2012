@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <c:set var="viewcontrollerBundle"
+         value="#{adfBundle['view.ViewControllerBundle']}"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document>
+      <af:messages/>
+      <af:form>
+        <af:table value="#{bindings.SDeptView1.collectionModel}" var="row"
+                  rows="#{bindings.SDeptView1.rangeSize}"
+                  emptyText="#{bindings.SDeptView1.viewable ? 'No rows yet.' : 'Access Denied.'}"
+                  fetchSize="#{bindings.SDeptView1.rangeSize}">
+          <af:column sortProperty="Id" sortable="false"
+                     headerText="#{bindings.SDeptView1.hints.Id.label}">
+            <af:inputText value="#{row.bindings.Id.inputValue}"
+                          label="#{bindings.SDeptView1.hints.Id.label}"
+                          required="#{bindings.SDeptView1.hints.Id.mandatory}"
+                          columns="#{bindings.SDeptView1.hints.Id.displayWidth}"
+                          maximumLength="#{bindings.SDeptView1.hints.Id.precision}"
+                          shortDesc="#{bindings.SDeptView1.hints.Id.tooltip}">
+              <f:validator binding="#{row.bindings.Id.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.SDeptView1.hints.Id.format}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="Name" sortable="false"
+                     headerText="#{viewcontrollerBundle.RRTRT}">
+            <af:inputText value="#{row.bindings.Name.inputValue}"
+                          label="#{bindings.SDeptView1.hints.Name.label}"
+                          required="#{bindings.SDeptView1.hints.Name.mandatory}"
+                          columns="#{bindings.SDeptView1.hints.Name.displayWidth}"
+                          maximumLength="#{bindings.SDeptView1.hints.Name.precision}"
+                          shortDesc="#{bindings.SDeptView1.hints.Name.tooltip}">
+              <f:validator binding="#{row.bindings.Name.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="RegionId" sortable="false"
+                     headerText="#{bindings.SDeptView1.hints.RegionId.label}">
+            <af:inputText value="#{row.bindings.RegionId.inputValue}"
+                          label="#{bindings.SDeptView1.hints.RegionId.label}"
+                          required="#{bindings.SDeptView1.hints.RegionId.mandatory}"
+                          columns="#{bindings.SDeptView1.hints.RegionId.displayWidth}"
+                          maximumLength="#{bindings.SDeptView1.hints.RegionId.precision}"
+                          shortDesc="#{bindings.SDeptView1.hints.RegionId.tooltip}">
+              <f:validator binding="#{row.bindings.RegionId.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.SDeptView1.hints.RegionId.format}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="Name1" sortable="false"
+                     headerText="#{bindings.SDeptView1.hints.Name1.label}">
+            <af:inputText value="#{row.bindings.Name1.inputValue}"
+                          label="#{bindings.SDeptView1.hints.Name1.label}"
+                          required="#{bindings.SDeptView1.hints.Name1.mandatory}"
+                          columns="#{bindings.SDeptView1.hints.Name1.displayWidth}"
+                          maximumLength="#{bindings.SDeptView1.hints.Name1.precision}"
+                          shortDesc="#{bindings.SDeptView1.hints.Name1.tooltip}">
+              <f:validator binding="#{row.bindings.Name1.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="Id1" sortable="false"
+                     headerText="#{bindings.SDeptView1.hints.Id1.label}">
+            <af:inputText value="#{row.bindings.Id1.inputValue}"
+                          label="#{bindings.SDeptView1.hints.Id1.label}"
+                          required="#{bindings.SDeptView1.hints.Id1.mandatory}"
+                          columns="#{bindings.SDeptView1.hints.Id1.displayWidth}"
+                          maximumLength="#{bindings.SDeptView1.hints.Id1.precision}"
+                          shortDesc="#{bindings.SDeptView1.hints.Id1.tooltip}">
+              <f:validator binding="#{row.bindings.Id1.validator}"/>
+              <af:convertNumber groupingUsed="false"
+                                pattern="#{bindings.SDeptView1.hints.Id1.format}"/>
+            </af:inputText>
+          </af:column>
+        </af:table>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
